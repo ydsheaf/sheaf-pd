@@ -51,13 +51,13 @@ $$\sum_i \varepsilon_i (1 - \eta_i) \leq 1 - \eta \leq \sum_i \varepsilon_i (1 -
 
 Or equivalently:
 
-$$\sum_i \varepsilon_i \eta_i - \varepsilon_{\text{cross}} \leq \eta \leq \sum_i \varepsilon_i \eta_i$$
+$$\sum_i \varepsilon_i \eta_i \leq \eta \leq \sum_i \varepsilon_i \eta_i + \varepsilon_{\text{cross}}$$
 
 **Interpretation (placement context)**:
-- η ≤ Σ ε_i η_i : global η is at most the weighted average of G-cell η's
-  (inter-cell nets can only HELP by adding new rank)
-- η ≥ Σ ε_i η_i - ε_cross : inter-cell nets contribute at most ε_cross of rank
-  (they can't fix more deficiency than their number)
+- η ≥ Σ ε_i η_i : global η is at least the weighted average of G-cell η's
+  (inter-cell nets can only ADD rank, i.e., REDUCE deficiency)
+- η ≤ Σ ε_i η_i + ε_cross : crossing edges contribute at most ε_cross
+  additional deficiency beyond the local contributions
 
 **Placement implication**: A placement with low per-G-cell η_i values
 guarantees low global η, regardless of inter-cell routing. This justifies
