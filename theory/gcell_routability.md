@@ -191,7 +191,7 @@ the G-cell area A, then:
     overflow(G_alpha) > 0  =>  Delta_bar_alpha > C
 
 for some constant C depending on cell sizes and routing resources.
-When C <= 4, this implies:
+When C >= 4, this implies:
 
     overflow(G_alpha) > 0  =>  eta_alpha > 0
 

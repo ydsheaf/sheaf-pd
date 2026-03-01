@@ -73,34 +73,25 @@ Explicitly, for edge e = (i,j) with overlap CBF h_{ij} = ||p_i - p_j||^2 - delta
 ### Coboundary Map
 
 The coboundary delta: C^0(G, F) -> C^1(G, F) acts on a global section
-s = (s_1, ..., s_N) in R^{2N} as:
+s = (s_1, ..., s_N) in R^{2N}. We adopt the **same-restriction-map
+convention** used in sheaf_cohomology.py and Theorem E of sheaf-swarm:
+both endpoints of an edge share the same restriction map
+rho_e = 2(p_i - p_j)^T, and the coboundary takes the difference:
 
-    (delta s)(e_{ij}) = rho_{i->e} . s_i - rho_{j->e} . s_j
-                      = 2(p_i - p_j)^T . s_i + 2(p_i - p_j)^T . s_j
-                      = 2(p_i - p_j)^T . (s_i + s_j)
-
-Wait -- let us be careful with signs. The standard coboundary convention is:
-
-    (delta s)(e_{ij}) = rho_{i->e} . s_i - rho_{j->e} . s_j
-
-With rho_{i->e} = 2(p_i - p_j)^T and rho_{j->e} = 2(p_j - p_i)^T = -2(p_i - p_j)^T:
-
-    (delta s)(e_{ij}) = 2(p_i - p_j)^T . s_i - (-2(p_i - p_j)^T) . s_j
-                      = 2(p_i - p_j)^T . (s_i + s_j)
-
-But the sheaf convention from sheaf-swarm uses rho_v = rho_w (same sign)
-for CBF gradients, so that:
-
-    (delta s)(e_{ij}) = rho . s_i - rho . s_j = rho . (s_i - s_j)
+    (delta s)(e_{ij}) = rho_e . s_i - rho_e . s_j
                       = 2(p_i - p_j)^T . (s_i - s_j)
 
-This is a directional derivative dh_{ij} measuring how a differential
-displacement (s_i - s_j) affects the overlap margin. The two conventions
-generally yield different coboundary matrices, but for the overlap CBF
-with symmetric h_{ij} the rank is preserved because the gradient structure
-forces rho_{i->e} = -rho_{j->e}, making the sign flip equivalent to
-reorienting edges. We adopt the latter convention (matching
-sheaf_cohomology.py and Theorem E in sheaf-swarm).
+This is the directional derivative dh_{ij} measuring how a differential
+displacement (s_i - s_j) affects the overlap margin.
+
+**Remark on sign conventions.** An alternative convention assigns the
+per-vertex gradients rho_{i->e} = nabla_{p_i} h_{ij} = 2(p_i - p_j)^T
+and rho_{j->e} = nabla_{p_j} h_{ij} = -2(p_i - p_j)^T, giving
+(delta s)(e) = rho_{i->e} s_i - rho_{j->e} s_j = 2(p_i-p_j)^T(s_i+s_j).
+For the overlap CBF, rho_{i->e} = -rho_{j->e}, so the two conventions
+differ by an edge reorientation and produce coboundary matrices of
+identical rank. We use the same-rho convention throughout for consistency
+with the sheaf-swarm codebase.
 
 ---
 
