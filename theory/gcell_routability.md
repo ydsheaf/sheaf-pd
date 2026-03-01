@@ -58,7 +58,7 @@ deficiency ratio and eta_alpha the per-G-cell deficiency. Then:
 
 **(i) Decomposition bounds** (from PD1):
 
-    sum_alpha epsilon_alpha . eta_alpha - epsilon_cross  <=  eta  <=  sum_alpha epsilon_alpha . eta_alpha
+    sum_alpha epsilon_alpha . eta_alpha  <=  eta  <=  sum_alpha epsilon_alpha . eta_alpha + epsilon_cross
 
 **(ii) Local routability criterion**: G-cell G_alpha is predicted
 **routable** if and only if:
@@ -252,13 +252,12 @@ N_max with:
 - d = 2
 
     N_max = V . 4d / (omega_d . (2 delta)^d)
-          = A . 8 / (pi . r^2)
+          = A . 4 / (pi . r^2)       [with delta = r/2, d = 2, omega_2 = pi]
 
-Note: there is a factor-of-2 difference due to the convention r = 2 delta
-vs. r = proximity radius. With the convention that cells interact at
-distance r and the effective safety radius is delta = r/2:
-
-    N_max = A . 4 . 2 / (pi . r^2) = 8A / (pi r^2)
+Note: substituting delta = r/2 into the Theorem D formula gives
+4·2/(pi·(2·r/2)^2) = 8/(pi·r^2) per unit area, but here V = A and
+r = 2·delta, so (2 delta)^d = r^2, yielding the same N_max = 4A/(pi r^2)
+as derived above from the local threshold.
 
 The exact coefficient depends on the RGG model (Poisson vs. binomial,
 boundary effects), but the SCALING N_max ~ A / r^2 is exact.  qed

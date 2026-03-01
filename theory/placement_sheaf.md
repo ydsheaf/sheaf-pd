@@ -95,9 +95,12 @@ for CBF gradients, so that:
                       = 2(p_i - p_j)^T . (s_i - s_j)
 
 This is a directional derivative dh_{ij} measuring how a differential
-displacement (s_i - s_j) affects the overlap margin. Both conventions
-give the same rank(delta) and hence the same H^1. We adopt the latter
-(matching sheaf_cohomology.py).
+displacement (s_i - s_j) affects the overlap margin. The two conventions
+generally yield different coboundary matrices, but for the overlap CBF
+with symmetric h_{ij} the rank is preserved because the gradient structure
+forces rho_{i->e} = -rho_{j->e}, making the sign flip equivalent to
+reorienting edges. We adopt the latter convention (matching
+sheaf_cohomology.py and Theorem E in sheaf-swarm).
 
 ---
 
