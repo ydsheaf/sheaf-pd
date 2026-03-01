@@ -35,15 +35,16 @@ Theorem H directly applies: η predicts placement routability.
 
 ## New Results
 
-| Result | Name | Statement |
-|--------|------|-----------|
-| PD1 | Partition Decomposition | η decomposes across G-cell partition with tight bounds |
-| PD2 | Hierarchical η | Multi-level placement hierarchy inherits η bounds |
+| Theorem | Name | Statement |
+|---------|------|-----------|
+| PD1 | Partition Decomposition | Σε_i η_i ≤ η ≤ Σε_i η_i + ε_cross |
+| PS1 | Placement-Sheaf Mapping | Overlap CBF → sheaf; η = max(0, 1-4/Δ̄) for d=2 |
+| GR1 | G-cell Routability | Per-G-cell η predicts routability; heatmap H(G_α) = η_α |
 
 ## Architecture
 
 ```
-theory/          Partition decomposition theorem, placement-sheaf mapping
+theory/          PD1, PS1, GR1 (partition_decomposition.md, placement_sheaf.md, gcell_routability.md)
 experiments/     G-cell η computation on OpenROAD benchmarks
 paper/           ICCAD submission
 ```
