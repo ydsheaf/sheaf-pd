@@ -1,0 +1,28 @@
+{
+  "design": "gcd_nangate45",
+  "pdk": "nangate45",
+  "N": 357,
+  "N_total": 357,
+  "m_rows": 42,
+  "cell_aspect": 1.8421052631578947,
+  "sweep": [
+    {
+      "r": 0.45599999999999996,
+      "nE": 46264,
+      "nE_intra": 1209,
+      "nE_inter": 45055,
+      "c": 71,
+      "dbar": 259.18207282913164,
+      "rank_theorem_G": 714,
+      "rank_actual": 714,
+      "rank_error": 0,
+      "eta_row": 0.9845668338232751,
+      "eta_generic": 0.9845668338232751,
+      "eta_actual": 0.9845668338232751,
+      "gap_predicted": 0.0,
+      "gap_actual": 0.0,
+      "nv_eff": 2.0,
+      "f_intra": 0.026132630122773646
+    }
+  ]
+}

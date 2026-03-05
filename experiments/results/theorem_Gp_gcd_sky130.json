@@ -1,0 +1,440 @@
+{
+  "design": "gcd_sky130",
+  "N": 370,
+  "sweep": [
+    {
+      "r": 3.2640000000000002,
+      "nE": 84,
+      "K_directions": 16,
+      "rank_Gp": 84,
+      "rank_actual": 84,
+      "rank_error": 0,
+      "eta_Gp": 0.0,
+      "eta_actual": 0.0,
+      "top_groups": [
+        {
+          "direction": [
+            0.5074,
+            1.0
+          ],
+          "n_edges": 10,
+          "n_vertices": 19,
+          "n_components": 9,
+          "rank_contribution": 10
+        },
+        {
+          "direction": [
+            0.5919,
+            -1.0
+          ],
+          "n_edges": 9,
+          "n_vertices": 18,
+          "n_components": 9,
+          "rank_contribution": 9
+        },
+        {
+          "direction": [
+            0.0,
+            1.0
+          ],
+          "n_edges": 9,
+          "n_vertices": 18,
+          "n_components": 9,
+          "rank_contribution": 9
+        },
+        {
+          "direction": [
+            0.3382,
+            1.0
+          ],
+          "n_edges": 8,
+          "n_vertices": 16,
+          "n_components": 8,
+          "rank_contribution": 8
+        },
+        {
+          "direction": [
+            0.0846,
+            1.0
+          ],
+          "n_edges": 7,
+          "n_vertices": 13,
+          "n_components": 6,
+          "rank_contribution": 7
+        }
+      ]
+    },
+    {
+      "r": 4.215068208226292,
+      "nE": 156,
+      "K_directions": 29,
+      "rank_Gp": 156,
+      "rank_actual": 156,
+      "rank_error": 0,
+      "eta_Gp": 0.0,
+      "eta_actual": 0.0,
+      "top_groups": [
+        {
+          "direction": [
+            1.0,
+            -0.0
+          ],
+          "n_edges": 20,
+          "n_vertices": 39,
+          "n_components": 19,
+          "rank_contribution": 20
+        },
+        {
+          "direction": [
+            0.8456,
+            -1.0
+          ],
+          "n_edges": 10,
+          "n_vertices": 19,
+          "n_components": 9,
+          "rank_contribution": 10
+        },
+        {
+          "direction": [
+            0.5074,
+            1.0
+          ],
+          "n_edges": 10,
+          "n_vertices": 19,
+          "n_components": 9,
+          "rank_contribution": 10
+        },
+        {
+          "direction": [
+            0.5919,
+            -1.0
+          ],
+          "n_edges": 9,
+          "n_vertices": 18,
+          "n_components": 9,
+          "rank_contribution": 9
+        },
+        {
+          "direction": [
+            1.0,
+            -0.9855
+          ],
+          "n_edges": 9,
+          "n_vertices": 17,
+          "n_components": 8,
+          "rank_contribution": 9
+        }
+      ]
+    },
+    {
+      "r": 4.83,
+      "nE": 186,
+      "K_directions": 35,
+      "rank_Gp": 186,
+      "rank_actual": 186,
+      "rank_error": 0,
+      "eta_Gp": 0.0,
+      "eta_actual": 0.0,
+      "top_groups": [
+        {
+          "direction": [
+            1.0,
+            0.0
+          ],
+          "n_edges": 28,
+          "n_vertices": 53,
+          "n_components": 25,
+          "rank_contribution": 28
+        },
+        {
+          "direction": [
+            0.8456,
+            -1.0
+          ],
+          "n_edges": 10,
+          "n_vertices": 19,
+          "n_components": 9,
+          "rank_contribution": 10
+        },
+        {
+          "direction": [
+            0.5074,
+            1.0
+          ],
+          "n_edges": 10,
+          "n_vertices": 19,
+          "n_components": 9,
+          "rank_contribution": 10
+        },
+        {
+          "direction": [
+            0.5919,
+            -1.0
+          ],
+          "n_edges": 9,
+          "n_vertices": 18,
+          "n_components": 9,
+          "rank_contribution": 9
+        },
+        {
+          "direction": [
+            1.0,
+            -0.9855
+          ],
+          "n_edges": 9,
+          "n_vertices": 17,
+          "n_components": 8,
+          "rank_contribution": 9
+        }
+      ]
+    },
+    {
+      "r": 6.322602312339438,
+      "nE": 443,
+      "K_directions": 62,
+      "rank_Gp": 440,
+      "rank_actual": 387,
+      "rank_error": -53,
+      "eta_Gp": 0.006772009029345383,
+      "eta_actual": 0.12641083521444696,
+      "top_groups": [
+        {
+          "direction": [
+            1.0,
+            -0.0
+          ],
+          "n_edges": 56,
+          "n_vertices": 94,
+          "n_components": 38,
+          "rank_contribution": 56
+        },
+        {
+          "direction": [
+            0.0846,
+            1.0
+          ],
+          "n_edges": 16,
+          "n_vertices": 29,
+          "n_components": 14,
+          "rank_contribution": 15
+        },
+        {
+          "direction": [
+            0.5919,
+            -1.0
+          ],
+          "n_edges": 16,
+          "n_vertices": 32,
+          "n_components": 16,
+          "rank_contribution": 16
+        },
+        {
+          "direction": [
+            -0.0,
+            1.0
+          ],
+          "n_edges": 16,
+          "n_vertices": 30,
+          "n_components": 14,
+          "rank_contribution": 16
+        },
+        {
+          "direction": [
+            1.0,
+            0.5375
+          ],
+          "n_edges": 14,
+          "n_vertices": 28,
+          "n_components": 14,
+          "rank_contribution": 14
+        }
+      ]
+    },
+    {
+      "r": 8.430136416452584,
+      "nE": 733,
+      "K_directions": 108,
+      "rank_Gp": 721,
+      "rank_actual": 466,
+      "rank_error": -255,
+      "eta_Gp": 0.016371077762619368,
+      "eta_actual": 0.36425648021828105,
+      "top_groups": [
+        {
+          "direction": [
+            1.0,
+            -0.0
+          ],
+          "n_edges": 99,
+          "n_vertices": 148,
+          "n_components": 52,
+          "rank_contribution": 96
+        },
+        {
+          "direction": [
+            -0.0,
+            1.0
+          ],
+          "n_edges": 29,
+          "n_vertices": 47,
+          "n_components": 20,
+          "rank_contribution": 27
+        },
+        {
+          "direction": [
+            0.1691,
+            1.0
+          ],
+          "n_edges": 18,
+          "n_vertices": 35,
+          "n_components": 17,
+          "rank_contribution": 18
+        },
+        {
+          "direction": [
+            0.2537,
+            -1.0
+          ],
+          "n_edges": 17,
+          "n_vertices": 30,
+          "n_components": 14,
+          "rank_contribution": 16
+        },
+        {
+          "direction": [
+            0.0846,
+            1.0
+          ],
+          "n_edges": 16,
+          "n_vertices": 29,
+          "n_components": 14,
+          "rank_contribution": 15
+        }
+      ]
+    },
+    {
+      "r": 12.645204624678875,
+      "nE": 1626,
+      "K_directions": 235,
+      "rank_Gp": 1571,
+      "rank_actual": 588,
+      "rank_error": -983,
+      "eta_Gp": 0.03382533825338252,
+      "eta_actual": 0.6383763837638377,
+      "top_groups": [
+        {
+          "direction": [
+            1.0,
+            -0.0
+          ],
+          "n_edges": 186,
+          "n_vertices": 224,
+          "n_components": 69,
+          "rank_contribution": 155
+        },
+        {
+          "direction": [
+            -0.0,
+            1.0
+          ],
+          "n_edges": 41,
+          "n_vertices": 61,
+          "n_components": 24,
+          "rank_contribution": 37
+        },
+        {
+          "direction": [
+            0.5919,
+            -1.0
+          ],
+          "n_edges": 24,
+          "n_vertices": 45,
+          "n_components": 21,
+          "rank_contribution": 24
+        },
+        {
+          "direction": [
+            0.3382,
+            1.0
+          ],
+          "n_edges": 24,
+          "n_vertices": 40,
+          "n_components": 18,
+          "rank_contribution": 22
+        },
+        {
+          "direction": [
+            0.5074,
+            1.0
+          ],
+          "n_edges": 24,
+          "n_vertices": 45,
+          "n_components": 22,
+          "rank_contribution": 23
+        }
+      ]
+    },
+    {
+      "r": 21.07534104113146,
+      "nE": 4295,
+      "K_directions": 660,
+      "rank_Gp": 4089,
+      "rank_actual": 695,
+      "rank_error": -3394,
+      "eta_Gp": 0.047962747380675186,
+      "eta_actual": 0.8381839348079162,
+      "top_groups": [
+        {
+          "direction": [
+            1.0,
+            -0.0
+          ],
+          "n_edges": 331,
+          "n_vertices": 262,
+          "n_components": 59,
+          "rank_contribution": 203
+        },
+        {
+          "direction": [
+            -0.0,
+            1.0
+          ],
+          "n_edges": 69,
+          "n_vertices": 83,
+          "n_components": 32,
+          "rank_contribution": 51
+        },
+        {
+          "direction": [
+            0.3382,
+            -1.0
+          ],
+          "n_edges": 37,
+          "n_vertices": 63,
+          "n_components": 28,
+          "rank_contribution": 35
+        },
+        {
+          "direction": [
+            0.3382,
+            1.0
+          ],
+          "n_edges": 35,
+          "n_vertices": 53,
+          "n_components": 23,
+          "rank_contribution": 30
+        },
+        {
+          "direction": [
+            0.2537,
+            -1.0
+          ],
+          "n_edges": 33,
+          "n_vertices": 57,
+          "n_components": 26,
+          "rank_contribution": 31
+        }
+      ]
+    }
+  ]
+}
