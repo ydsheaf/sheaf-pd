@@ -4,6 +4,12 @@ Proves that row-based standard cell placement has a nonzero genericity
 gap, and characterizes three sources of rank deficiency in the placement
 coboundary.
 
+**Connection to rigidity theory.** Theorem G is a Laman-style counting
+argument (Laman 1970) adapted to the sheaf setting: the rank of the
+coboundary is bounded by a combinatorial count on the constraint graph,
+with the specific structure of row-based placement reducing rank below
+the generic Laman bound.
+
 ---
 
 ## 1. Setup
@@ -69,24 +75,31 @@ linear dependencies when multiple edges share the same (Δx, Δy).
 (G2) Inter-row edges connect cells at distinct heights:
      for all (i,j) ∈ E_inter, y_i ≠ y_j.
 
-(G3) The inter-row restriction maps {ρ_e : e ∈ E_inter} are in
-     general position among the (c + |V|)-dimensional residual DOF
-     space (see proof for precise meaning).
+(G3) The inter-row constraint equations are **transversal** to the
+     intra-row kernel: for each inter-row edge e = (i,j) with i in
+     component α, j in component β, the equation
+     (x_i−x_j)(c_α−c_β) + (y_i−y_j)(s_y^i−s_y^j) = 0
+     is not in the span of previous inter-row equations (up to
+     min(|E_inter|, c+|V|) equations).
+
+     Note: (G3) fails for grid-quantized placements where cell
+     coordinates are integer multiples of site width. In that case,
+     the formula below is an upper bound (see Section 6).
 
 **Statement.** Under (G1)-(G3):
 
     rank(δ) = (|V| − c) + min(|E_inter|, c + |V|)
 
-This is an **upper bound** on the actual rank when (G3) fails (i.e.,
-when Sources II and III are present).
+In general (without G3), this is an **upper bound**:
 
-**Corollary (Collinearity Gap).** When (G3) holds:
+    rank(δ) ≤ (|V| − c) + min(|E_inter|, c + |V|)
 
-    gap_collinear = max(0, c + |V| − |E_inter|) / |E|
+**Corollary (Collinearity Gap Lower Bound).**
 
-When (G3) fails (real placements), the actual gap is larger:
+    gap_actual ≥ gap_collinear = max(0, c + |V| − |E_inter|) / |E|
 
-    gap_actual ≥ gap_collinear
+Equality holds when (G3) is satisfied. For grid-quantized placements,
+gap_actual > gap_collinear due to Sources II and III.
 
 ---
 
@@ -119,17 +132,38 @@ After intra-row constraints, the residual kernel is (c + |V|)-dimensional:
 - c_1, ..., c_c ∈ R (x-constant per component)
 - s_y^1, ..., s_y^{|V|} ∈ R (free y-displacements)
 
-### Step 4: Inter-row constraints
+### Step 4: Inter-row constraints (Schur complement argument)
+
+Partition the coboundary matrix by edge type:
+
+    δ = [δ_intra]    (|E_intra| × 2|V|)
+        [δ_inter]    (|E_inter| × 2|V|)
+
+From Step 2, δ_intra has rank |V| − c and its kernel K_intra is
+(c + |V|)-dimensional (c x-constants + |V| y-DOFs).
+
+The total rank satisfies:
+
+    rank(δ) = rank(δ_intra) + rank(δ_inter|_{K_intra})
+
+where δ_inter|_{K_intra} is the restriction of δ_inter to the
+kernel of δ_intra (the Schur complement). This is the (|E_inter|) ×
+(c + |V|) matrix whose rows are the inter-row equations in the
+residual DOF coordinates (c_α, c_β, s_y^i, s_y^j).
 
 For (i,j) ∈ E_inter, i in component α, j in component β:
 
-    (x_i − x_j)(c_α − c_β) + (y_i − y_j)(s_y^i − s_y^j) = 0
+    (δ_inter|_{K_intra})_e = (x_i − x_j)(c_α − c_β) + (y_i − y_j)(s_y^i − s_y^j)
 
-Under (G3), the |E_inter| equations achieve rank min(|E_inter|, c + |V|).
+Under (G3) (transversality), this matrix has rank min(|E_inter|, c + |V|).
 
 ### Step 5: Total
 
-    rank(δ) = (|V| − c) + min(|E_inter|, c + |V|)  ∎
+    rank(δ) = rank(δ_intra) + rank(δ_inter|_{K_intra})
+            = (|V| − c) + min(|E_inter|, c + |V|)  ∎
+
+The Schur complement structure ensures additivity: the intra-row
+and inter-row contributions operate on complementary subspaces.
 
 ---
 
@@ -157,20 +191,37 @@ Let D = {d_1, ..., d_K} be the set of distinct (Δx, Δy) vectors
 
     E_k = {e ∈ E : d_e = d_k}
 
-### Rank contribution per direction group
+### Scalar sheaf decomposition
 
-Edges sharing direction d = (a, b) have restriction maps ρ_e = λ_e · (a, b)
-where λ_e = 2‖p_i − p_j‖ varies. These edges all constrain the SAME
-linear combination a·s_x + b·s_y of displacements. Therefore:
+Each direction d_k = (a_k, b_k) defines a **projection** π_k : R^2 → R^1
+by π_k(s_x, s_y) = a_k·s_x + b_k·s_y. Under this projection, all edges
+in group E_k have scalar restriction maps:
 
-**Within direction group E_k:** the coboundary rows span a subspace
-of dimension at most |V_k| − 1, where V_k is the set of vertices
-incident to edges in E_k (connected components of the subgraph (V_k, E_k)).
+    ρ_e^{(k)} = λ_e ∈ R^{1×1}    (scalar, since direction is fixed)
 
-More precisely: edges with direction (a, b) constrain the 1D projection
-a·s_x^i + b·s_y^i. This is equivalent to a scalar sheaf on the subgraph
-(V_k, E_k). The rank contribution is the number of vertices minus the
-number of connected components of this subgraph.
+This defines a **scalar sheaf F_k** on the subgraph (V_k, E_k):
+- Vertex stalks: F_k(v) = R^1 (the projected displacement π_k(s_v))
+- Edge stalks: F_k(e) = R^1
+- Restriction maps: scalar multiples λ_e
+
+The rank contribution from group k is the rank of this scalar sheaf's
+coboundary, which equals |V_k| − c_k (vertices minus components) by
+standard 1D sheaf theory (Theorem H with n_v = n_e = 1).
+
+**Interpretation.** Theorem G' decomposes the R^2-valued placement
+sheaf into K independent R^1-valued scalar sheaves, one per direction.
+The total rank is bounded by the sum of scalar sheaf ranks.
+
+**Saturation.** Each vertex v has 2 DOFs (s_x^v, s_y^v). At most 2
+linearly independent projections can constrain it. If vertex v appears
+in K_v > 2 direction groups, only 2 of them contribute independent
+information. The overcounting is:
+
+    overcount = Σ_v max(0, K_v − 2)
+
+where K_v = number of direction groups incident to vertex v. This
+explains why rank_Gp > rank_actual for large r (many directions per
+vertex).
 
 ### Theorem G' (Direction-Based Rank Bound)
 
@@ -251,11 +302,14 @@ At gcd_sky130, r=8.43:
 - rank_generic = min(733, 740) = 733
 - rank_G = 730 (collinearity removes 3)
 - rank_actual = 466 (grid quantization removes 264 more!)
-- **Grid quantization dominates:** 264 / 267 = 99% of rank loss
+- **Grid quantization dominates for coarse-grid PDKs:** 264 / 267 = 99%
+  of rank loss for SKY130 (site width 0.46μm). For fine-grid PDKs
+  (e.g., ASAP7, site width 0.054μm), collinearity becomes the more
+  significant factor as the grid approaches continuous.
 
-This means the dominant physics fingerprint is NOT row collinearity
-alone, but the **combination of regular grid spacing + fixed row
-y-coordinates** creating highly structured (non-generic) restriction maps.
+This means the dominant physics fingerprint is PDK-dependent: coarse
+grids have their rank loss dominated by grid quantization, while fine
+grids are closer to the collinearity-only prediction of Theorem G.
 
 ### gcd_preroute (NanGate45) comparison
 
