@@ -42,7 +42,8 @@ the space of constraint configurations that NO control input can satisfy.
 
     η = dim H¹(G, F) / |E|
 
-- η = 0: all constraints simultaneously satisfiable → geometric shield works
+- η = 0: a necessary condition for simultaneous satisfiability under
+  generic position → geometric shield works
 - η > 0: fraction η of constraints are structurally unsatisfiable →
   geometric shield WILL oscillate → need topological shield
 
@@ -126,6 +127,7 @@ rounds). No centralized computation, no SVD, no training.
 - η as diagnostic: R² > 0.95 for η vs Δ̄ across 8+ designs
 - η=0 → DRC=0: **confirmed** via OpenROAD GR (3 designs, 2 PDKs)
 - η-shield for step size: -29% residual overlap area (NanGate45)
+  (diagnostic validated, control transfer marginal)
 - η decomposition: η = η_density + η_structural, with
   η_structural PDK-dependent (SKY130 >> NanGate45 >> ASAP7)
 
@@ -134,7 +136,7 @@ rounds). No centralized computation, no SVD, no training.
 | Aspect | Drone (real-time) | Placement (offline) |
 |---|---|---|
 | η as shield | **Dominant** (100% vs 78%) | Marginal (-29% area) |
-| η as diagnostic | Useful (σ_min early warning) | **Dominant** (replaces RUDY) |
+| η as diagnostic | Useful (σ_min early warning) | **Dominant** (adds complementary information beyond density) |
 | RL improvement | None (Theorem 11 optimal) | None (convex problem) |
 
 **Key insight**: The topological shield's value depends on the domain.

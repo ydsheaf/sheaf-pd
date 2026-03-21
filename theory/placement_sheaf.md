@@ -152,7 +152,7 @@ sheaf whose restriction maps are derived from a valid CBF.  qed
 | Agent velocity v_i | (not used: position-only) | -- |
 | Control input u_i (acceleration) | Cell displacement u_i (placement update) | Element of R^d |
 | CBF-QP: min \|\|u - u_nom\|\|^2 s.t. safety | Legalization: min displacement s.t. no overlap | Constrained optimization |
-| H^1 = 0: all safety constraints satisfiable | H^1 = 0: all overlap constraints satisfiable | Sheaf cohomology vanishing |
+| H^1 = 0: all safety constraints satisfiable | H^1 = 0: necessary condition for overlap feasibility (under generic position) | Sheaf cohomology vanishing |
 | eta > 0: fraction of unsatisfiable constraints | eta > 0: fraction of unresolvable overlaps | Cohomological deficiency ratio |
 | N_max: max agents before eta > 0 | N_max: max cells per G-cell before congestion | Theorem D bound |
 | Congestion density | G-cell utilization | Local Delta_bar |
@@ -227,6 +227,16 @@ eta_row = max(0, 1 - 2/Delta_bar_row) for intra-row constraints, and
 the full n_v = 2 applies only for inter-row interactions. This is
 precisely the CBF genericity gap (Conjecture G from sheaf-swarm).
 
+**EDA caveat.** For row-based placements, the generic position assumption
+typically does NOT hold: cells sharing a row are collinear by
+construction. In this regime, eta = 0 is best understood as a
+**proxy** for feasibility, not a guarantee. The cohomological analysis
+provides a necessary condition (if eta > 0 the placement is certainly
+overconstrained), but eta = 0 alone does not ensure that a legal
+placement exists -- the bounding-circle relaxation and the loss of
+genericity both introduce gaps between the sheaf-theoretic prediction
+and the true combinatorial feasibility of the placement problem.
+
 ---
 
 ## 6. Phase Transition at Delta_bar = 4
@@ -235,9 +245,10 @@ precisely the CBF genericity gap (Conjecture G from sheaf-swarm).
 
 The placement undergoes a phase transition at Delta_bar_c = 4:
 
-- **Delta_bar < 4**: eta = 0. All overlap constraints are simultaneously
-  satisfiable. The placement is **feasible** -- cells can be moved
-  to eliminate all overlaps.
+- **Delta_bar < 4**: eta = 0. This is a necessary condition for
+  simultaneous satisfiability of all overlap constraints under generic
+  position: there exists a sufficient number of DOFs for a satisfying
+  displacement. The placement is **potentially feasible**.
 
 - **Delta_bar > 4**: eta = 1 - 4/Delta_bar > 0. A fraction eta of
   overlap constraints are **topologically unsatisfiable** -- no
@@ -347,7 +358,10 @@ of how they are rearranged -- precisely the congestion hotspot.
 
 ### Practical Implication
 
-At s = 0.8 (Delta_bar = 3.2 < 4), a legalizer CAN resolve all overlaps.
+At s = 0.8 (Delta_bar = 3.2 < 4), the constraint system has enough DOFs
+that a legalizer may resolve all overlaps (eta = 0 is necessary for
+feasibility but not a guarantee, since the CBF is a bounding-circle
+relaxation of the true rectangular constraint).
 At s = 0.5 (Delta_bar = 5 > 4), approximately 20% of overlap constraints
 are inherently unsatisfiable -- the placement is too dense. The only
 resolution is to move cells to a different region (global re-placement)
@@ -414,8 +428,11 @@ identifies WHICH regions are congested and by how much.
    via Theorem H of sheaf-swarm).
 
 4. **Phase transition at Delta_bar = 4**: placements with fewer than 4
-   average overlap interactions per cell are legalizable; those with more
-   have an irreducible fraction of violations (Corollary PS1.1).
+   average overlap interactions per cell satisfy the necessary condition
+   for feasibility (eta = 0); those with more have an irreducible
+   fraction of violations (Corollary PS1.1). For row-based placements
+   where generic position may not hold, eta = 0 is a proxy for
+   feasibility rather than a guarantee.
 
 ### What Remains
 
