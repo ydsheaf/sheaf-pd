@@ -1,0 +1,109 @@
+{
+  "design": "aes_nangate45",
+  "N": 16591,
+  "gs": 10,
+  "max_svd_cells": 3000,
+  "ground_truth": "GRT guide-based usage (gcell_overflow_congested_aes_nangate45.json)",
+  "grt_summary": {
+    "guide_based": {
+      "total_gcells_with_demand": 119223,
+      "gcells_with_overflow": 23310,
+      "total_overflow": 365426
+    },
+    "edge_based": {
+      "total_h_edges": 78681,
+      "total_v_edges": 87484,
+      "h_demand": 186774,
+      "v_demand": 196483,
+      "h_capacity": 1175711,
+      "v_capacity": 965400,
+      "total_overflow": 31,
+      "max_h_overflow": 0,
+      "max_v_overflow": 5
+    }
+  },
+  "results_per_radius": [
+    {
+      "r": 1.691892431568863,
+      "r_over_diag": 1.0,
+      "n_valid_cells": 31,
+      "R2_eta": 0.0,
+      "R2_density": 0.9469277811246336,
+      "CV2_R2_density_alone": 0.928935605530832,
+      "CV2_R2_eta_plus_density": 0.928935605530832,
+      "LOO_R2_density_alone": 0.9402069708517793,
+      "LOO_R2_eta_plus_density": 0.9402069708517793,
+      "LOO_R2_eta_alone": 0.0,
+      "eta_improvement_LOO": 0.0
+    },
+    {
+      "r": 2.5378386473532943,
+      "r_over_diag": 1.4999999999999998,
+      "n_valid_cells": 31,
+      "R2_eta": 0.0,
+      "R2_density": 0.9469277811246336,
+      "CV2_R2_density_alone": 0.928935605530832,
+      "CV2_R2_eta_plus_density": 0.928935605530832,
+      "LOO_R2_density_alone": 0.9402069708517793,
+      "LOO_R2_eta_plus_density": 0.9402069708517793,
+      "LOO_R2_eta_alone": 0.0,
+      "eta_improvement_LOO": 0.0
+    },
+    {
+      "r": 3.383784863137726,
+      "r_over_diag": 2.0,
+      "n_valid_cells": 31,
+      "R2_eta": 1.3961117259494334e-06,
+      "R2_density": 0.9469277811246336,
+      "CV2_R2_density_alone": 0.928935605530832,
+      "CV2_R2_eta_plus_density": 0.9304386971892384,
+      "LOO_R2_density_alone": 0.9402069708517793,
+      "LOO_R2_eta_plus_density": 0.9403233800632693,
+      "LOO_R2_eta_alone": -1.3801349153016007,
+      "eta_improvement_LOO": 0.0001164092114900317
+    },
+    {
+      "r": 5.075677294706589,
+      "r_over_diag": 2.9999999999999996,
+      "n_valid_cells": 31,
+      "R2_eta": 0.12853929453501103,
+      "R2_density": 0.9469277811246336,
+      "CV2_R2_density_alone": 0.928935605530832,
+      "CV2_R2_eta_plus_density": 0.894075694504666,
+      "LOO_R2_density_alone": 0.9402069708517793,
+      "LOO_R2_eta_plus_density": 0.9265057740250363,
+      "LOO_R2_eta_alone": -0.14320017560378595,
+      "eta_improvement_LOO": -0.013701196826742978
+    },
+    {
+      "r": 6.767569726275452,
+      "r_over_diag": 4.0,
+      "n_valid_cells": 31,
+      "R2_eta": 0.652844582775763,
+      "R2_density": 0.9469277811246336,
+      "CV2_R2_density_alone": 0.928935605530832,
+      "CV2_R2_eta_plus_density": 0.9352441151723054,
+      "LOO_R2_density_alone": 0.9402069708517793,
+      "LOO_R2_eta_plus_density": 0.949801187644059,
+      "LOO_R2_eta_alone": 0.6033060318180027,
+      "eta_improvement_LOO": 0.009594216792279675
+    }
+  ],
+  "best": {
+    "r": 6.767569726275452,
+    "r_over_diag": 4.0,
+    "n_valid_cells": 31,
+    "R2_eta": 0.652844582775763,
+    "R2_density": 0.9469277811246336,
+    "CV2_R2_density_alone": 0.928935605530832,
+    "CV2_R2_eta_plus_density": 0.9352441151723054,
+    "LOO_R2_density_alone": 0.9402069708517793,
+    "LOO_R2_eta_plus_density": 0.949801187644059,
+    "LOO_R2_eta_alone": 0.6033060318180027,
+    "eta_improvement_LOO": 0.009594216792279675
+  },
+  "comparison_demand_proxy": {
+    "R2_eta_demand_proxy": 0.4,
+    "R2_rudy_demand_proxy": 0.11
+  }
+}
