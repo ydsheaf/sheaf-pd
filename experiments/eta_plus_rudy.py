@@ -361,9 +361,15 @@ def plot_combined(results, r2_rudy, r2_cell_dens, design_name, diag):
 
 
 def main():
-    features = compute_features("gcd_nangate45", gs=6)
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--design", type=str, default="gcd_nangate45")
+    parser.add_argument("--gs", type=int, default=6)
+    args = parser.parse_args()
+
+    features = compute_features(args.design, gs=args.gs)
     if features:
-        run_regression(features, "gcd_nangate45")
+        run_regression(features, args.design)
 
 
 if __name__ == "__main__":
