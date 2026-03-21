@@ -100,7 +100,7 @@ Total           834192        383442           45.97%            14 / 16 / 14609
 [INFO GRT-0018] Total wirelength: 1042473 um
 [INFO GRT-0014] Routed nets: 16880
 [WARNING GRT-0115] Global routing finished with congestion. Check the congestion regions in the DRC Viewer.
-[INFO GRT-0303] Global routing runtime = 00:28:44
+[INFO GRT-0303] Global routing runtime = 00:28:43
 DIE_UM 0.0 0.0 1020.0 920.8
 DBU 2000
 === NET_BBOX_START ===

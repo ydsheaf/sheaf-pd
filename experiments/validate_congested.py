@@ -94,7 +94,7 @@ puts "=== NET_BBOX_END ==="
 
     result = subprocess.run(
         [OPENROAD, "-no_splash", "-exit", tcl_path],
-        capture_output=True, text=True, timeout=600
+        capture_output=True, text=True, timeout=3600
     )
 
     full_output = result.stdout + result.stderr
@@ -230,11 +230,12 @@ def run_analysis(design_name, gs=10, max_layer="metal3"):
 
     for r_interact in r_values:
         # Subsample for SVD if needed
-        if N > 1500:
+        max_cells = max(5000, gs * gs * 20)  # ensure coverage for larger grids
+        if N > max_cells:
             rng = np.random.default_rng(42)
             cx, cy = np.mean(positions, axis=0)
             dists = np.sqrt((positions[:, 0] - cx)**2 + (positions[:, 1] - cy)**2)
-            idx = np.argsort(dists)[:1500]
+            idx = np.argsort(dists)[:max_cells]
             pos_sub = positions[idx]
             w_sub = widths[idx]
             h_sub = heights[idx]
@@ -410,16 +411,13 @@ def plot_congested(eta_map, rudy_map, demand_map, ncells_map, dbar_map,
 
 
 def main():
-    # gcd NanGate45 with restricted layers
-    r1 = run_analysis("gcd_nangate45", gs=6, max_layer="metal3")
-
-    # gcd sky130
-    r2 = run_analysis("gcd_sky130", gs=6, max_layer="met3")
+    # AES NanGate45 with restricted layers (larger design)
+    r1 = run_analysis("aes_nangate45", gs=12, max_layer="metal3")
 
     print(f"\n{'='*70}")
     print("CONGESTED VALIDATION SUMMARY")
     print(f"{'='*70}")
-    for r in [r1, r2]:
+    for r in [r1]:
         if r:
             winner = "η" if r["eta_wins"] else "RUDY"
             print(f"  {r['design']:>20s}: overflow={r['total_overflow']:>8d}  "

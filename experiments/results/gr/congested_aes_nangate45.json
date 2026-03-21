@@ -1,0 +1,12 @@
+{
+  "design": "aes_nangate45",
+  "N": 16591,
+  "gs": 12,
+  "max_layer": "metal3",
+  "total_overflow": 146091,
+  "best_r": 5.075677294706589,
+  "best_r_over_diag": 2.9999999999999996,
+  "R2_eta_demand": 0.400907387222625,
+  "R2_rudy_demand": 0.11288763719373375,
+  "eta_wins": true
+}
