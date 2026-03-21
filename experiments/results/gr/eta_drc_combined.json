@@ -1,0 +1,232 @@
+{
+  "gcd_nangate45": {
+    "design": "gcd_nangate45",
+    "N": 357,
+    "gs": 8,
+    "gr_data": {
+      "layers": [
+        {
+          "name": "metal1",
+          "resource": 0,
+          "demand": 0,
+          "usage_pct": 0.0,
+          "max_h_overflow": 0,
+          "max_v_overflow": 0,
+          "total_overflow": 0
+        },
+        {
+          "name": "metal2",
+          "resource": 8279,
+          "demand": 981,
+          "usage_pct": 11.85,
+          "max_h_overflow": 0,
+          "max_v_overflow": 0,
+          "total_overflow": 0
+        },
+        {
+          "name": "metal3",
+          "resource": 11977,
+          "demand": 931,
+          "usage_pct": 7.77,
+          "max_h_overflow": 0,
+          "max_v_overflow": 0,
+          "total_overflow": 0
+        },
+        {
+          "name": "metal4",
+          "resource": 5897,
+          "demand": 0,
+          "usage_pct": 0.0,
+          "max_h_overflow": 0,
+          "max_v_overflow": 0,
+          "total_overflow": 0
+        },
+        {
+          "name": "metal5",
+          "resource": 6002,
+          "demand": 0,
+          "usage_pct": 0.0,
+          "max_h_overflow": 0,
+          "max_v_overflow": 0,
+          "total_overflow": 0
+        },
+        {
+          "name": "metal6",
+          "resource": 5978,
+          "demand": 0,
+          "usage_pct": 0.0,
+          "max_h_overflow": 0,
+          "max_v_overflow": 0,
+          "total_overflow": 0
+        },
+        {
+          "name": "metal7",
+          "resource": 1876,
+          "demand": 0,
+          "usage_pct": 0.0,
+          "max_h_overflow": 0,
+          "max_v_overflow": 0,
+          "total_overflow": 0
+        },
+        {
+          "name": "metal8",
+          "resource": 1904,
+          "demand": 0,
+          "usage_pct": 0.0,
+          "max_h_overflow": 0,
+          "max_v_overflow": 0,
+          "total_overflow": 0
+        },
+        {
+          "name": "metal9",
+          "resource": 1190,
+          "demand": 0,
+          "usage_pct": 0.0,
+          "max_h_overflow": 0,
+          "max_v_overflow": 0,
+          "total_overflow": 0
+        },
+        {
+          "name": "metal10",
+          "resource": 1190,
+          "demand": 0,
+          "usage_pct": 0.0,
+          "max_h_overflow": 0,
+          "max_v_overflow": 0,
+          "total_overflow": 0
+        }
+      ],
+      "total_overflow": 0,
+      "total_resource": 44293,
+      "total_demand": 1912,
+      "wirelength": 7931.0,
+      "gcell_nx": 0,
+      "gcell_ny": 0
+    },
+    "has_congestion": false,
+    "usage_pct": 4.3167091865531795
+  },
+  "aes_nangate45": {
+    "design": "aes_nangate45",
+    "N": 16591,
+    "gs": 8,
+    "gr_data": {
+      "layers": [
+        {
+          "name": "metal1",
+          "resource": 0,
+          "demand": 0,
+          "usage_pct": 0.0,
+          "max_h_overflow": 0,
+          "max_v_overflow": 0,
+          "total_overflow": 0
+        },
+        {
+          "name": "metal2",
+          "resource": 795259,
+          "demand": 76266,
+          "usage_pct": 9.59,
+          "max_h_overflow": 0,
+          "max_v_overflow": 0,
+          "total_overflow": 0
+        },
+        {
+          "name": "metal3",
+          "resource": 1142550,
+          "demand": 88007,
+          "usage_pct": 7.7,
+          "max_h_overflow": 0,
+          "max_v_overflow": 0,
+          "total_overflow": 0
+        },
+        {
+          "name": "metal4",
+          "resource": 563122,
+          "demand": 25962,
+          "usage_pct": 4.61,
+          "max_h_overflow": 0,
+          "max_v_overflow": 0,
+          "total_overflow": 0
+        },
+        {
+          "name": "metal5",
+          "resource": 572546,
+          "demand": 21532,
+          "usage_pct": 3.76,
+          "max_h_overflow": 0,
+          "max_v_overflow": 0,
+          "total_overflow": 0
+        },
+        {
+          "name": "metal6",
+          "resource": 575158,
+          "demand": 8762,
+          "usage_pct": 1.52,
+          "max_h_overflow": 0,
+          "max_v_overflow": 0,
+          "total_overflow": 0
+        },
+        {
+          "name": "metal7",
+          "resource": 166793,
+          "demand": 556,
+          "usage_pct": 0.33,
+          "max_h_overflow": 0,
+          "max_v_overflow": 0,
+          "total_overflow": 0
+        },
+        {
+          "name": "metal8",
+          "resource": 180320,
+          "demand": 0,
+          "usage_pct": 0.0,
+          "max_h_overflow": 0,
+          "max_v_overflow": 0,
+          "total_overflow": 0
+        },
+        {
+          "name": "metal9",
+          "resource": 114988,
+          "demand": 0,
+          "usage_pct": 0.0,
+          "max_h_overflow": 0,
+          "max_v_overflow": 0,
+          "total_overflow": 0
+        },
+        {
+          "name": "metal10",
+          "resource": 114954,
+          "demand": 0,
+          "usage_pct": 0.0,
+          "max_h_overflow": 0,
+          "max_v_overflow": 0,
+          "total_overflow": 0
+        }
+      ],
+      "total_overflow": 0,
+      "total_resource": 4225690,
+      "total_demand": 221085,
+      "wirelength": 809380.0,
+      "gcell_nx": 0,
+      "gcell_ny": 0
+    },
+    "has_congestion": false,
+    "usage_pct": 5.231926620267933
+  },
+  "gcd_sky130": {
+    "design": "gcd_sky130",
+    "N": 370,
+    "gs": 8,
+    "gr_data": {
+      "layers": [],
+      "total_overflow": 0,
+      "total_resource": 0,
+      "total_demand": 0,
+      "wirelength": 0,
+      "gcell_nx": 0,
+      "gcell_ny": 0
+    },
+    "has_congestion": false,
+    "usage_pct": 0.0
+  }
+}

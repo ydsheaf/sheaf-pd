@@ -1,0 +1,76 @@
+[INFO ODB-0227] LEF file: /mnt/storage1/users/ydwu/claude_projects/OpenROAD-flow-scripts/tools/OpenROAD/src/drt/test/Nangate45/Nangate45_tech.lef, created 22 layers, 27 vias
+[INFO ODB-0227] LEF file: /mnt/storage1/users/ydwu/claude_projects/OpenROAD-flow-scripts/tools/OpenROAD/src/drt/test/Nangate45/Nangate45_stdcell.lef, created 135 library cells
+[INFO ODB-0127] Reading DEF file: /mnt/storage1/users/ydwu/claude_projects/OpenROAD-flow-scripts/tools/OpenROAD/src/drt/test/aes_nangate45_preroute.def
+[INFO ODB-0128] Design: aes_cipher_top
+[INFO ODB-0094] 		Created 100000 Insts
+[INFO ODB-0130]     Created 388 pins.
+[INFO ODB-0131]     Created 156172 components and 375552 component-terminals.
+[INFO ODB-0132]     Created 2 special nets and 312344 connections.
+[INFO ODB-0133]     Created 17386 nets and 63208 connections.
+[INFO ODB-0134] Finished DEF file: /mnt/storage1/users/ydwu/claude_projects/OpenROAD-flow-scripts/tools/OpenROAD/src/drt/test/aes_nangate45_preroute.def
+[WARNING GRT-0300] Timing is not available, setting critical nets percentage to 0.
+[INFO GRT-0020] Min routing layer: metal2
+[INFO GRT-0021] Max routing layer: metal10
+[INFO GRT-0022] Global adjustment: 0%
+[INFO GRT-0023] Grid origin: (0, 0)
+[INFO GRT-0088] Layer metal1  Track-Pitch = 0.1400  line-2-Via Pitch: 0.1350
+[INFO GRT-0088] Layer metal2  Track-Pitch = 0.1900  line-2-Via Pitch: 0.1400
+[INFO GRT-0088] Layer metal3  Track-Pitch = 0.1400  line-2-Via Pitch: 0.1400
+[INFO GRT-0088] Layer metal4  Track-Pitch = 0.2800  line-2-Via Pitch: 0.2800
+[INFO GRT-0088] Layer metal5  Track-Pitch = 0.2800  line-2-Via Pitch: 0.2800
+[INFO GRT-0088] Layer metal6  Track-Pitch = 0.2800  line-2-Via Pitch: 0.2800
+[INFO GRT-0088] Layer metal7  Track-Pitch = 0.8000  line-2-Via Pitch: 0.8000
+[INFO GRT-0088] Layer metal8  Track-Pitch = 0.8000  line-2-Via Pitch: 0.8000
+[INFO GRT-0088] Layer metal9  Track-Pitch = 1.6000  line-2-Via Pitch: 1.6000
+[INFO GRT-0088] Layer metal10 Track-Pitch = 1.6000  line-2-Via Pitch: 1.6000
+[INFO GRT-0003] Macros: 0
+[INFO GRT-0004] Blockages: 0
+[INFO GRT-0019] Found 0 clock nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 139
+
+[INFO GRT-0053] Routing resources analysis:
+          Routing      Original      Derated      Resource
+Layer     Direction    Resources     Resources    Reduction (%)
+---------------------------------------------------------------
+metal1     Horizontal          0             0          0.00%
+metal2     Vertical      1693476        795259          53.04%
+metal3     Horizontal    2329262       1142550          50.95%
+metal4     Vertical      1148752        563122          50.98%
+metal5     Horizontal    1166600        572546          50.92%
+metal6     Vertical      1171336        575158          50.90%
+metal7     Horizontal     372550        166793          55.23%
+metal8     Vertical       410550        180320          56.08%
+metal9     Horizontal     205056        114988          43.92%
+metal10    Vertical       205436        114954          44.04%
+---------------------------------------------------------------
+
+[INFO GRT-0197] Via related to pin nodes: 121932
+[INFO GRT-0198] Via related Steiner nodes: 5126
+[INFO GRT-0199] Via filling finished.
+[INFO GRT-0111] Final number of vias: 160759
+[INFO GRT-0112] Final usage 3D: 703362
+
+[INFO GRT-0096] Final congestion report:
+Layer         Resource        Demand        Usage (%)    Max H / Max V / Total Overflow
+---------------------------------------------------------------------------------------
+metal1               0             0            0.00%             0 /  0 /  0
+metal2          795259         76266            9.59%             0 /  0 /  0
+metal3         1142550         88007            7.70%             0 /  0 /  0
+metal4          563122         25962            4.61%             0 /  0 /  0
+metal5          572546         21532            3.76%             0 /  0 /  0
+metal6          575158          8762            1.52%             0 /  0 /  0
+metal7          166793           556            0.33%             0 /  0 /  0
+metal8          180320             0            0.00%             0 /  0 /  0
+metal9          114988             0            0.00%             0 /  0 /  0
+metal10         114954             0            0.00%             0 /  0 /  0
+---------------------------------------------------------------------------------------
+Total          4225690        221085            5.23%             0 /  0 /  0
+
+[INFO GRT-0018] Total wirelength: 809380 um
+[INFO GRT-0014] Routed nets: 16880
+[INFO GRT-0303] Global routing runtime = 00:00:03
+=== GCELL_CONGESTION_START ===
+DIE 0 0 2040000 1841600
+DBU 2000
+Error: _gr_aes_nangate45.tcl, 16 Invalid method. Must be one of: configure cget -acquire -disown -delete getGridX getGridY getBlock addGridPatternX addGridPatternY getNumGridPatternsX getNumGridPatternsY getGridPatternX getGridPatternY getXIdx getYIdx getCapacity getUsage setCapacity setUsage resetCongestionMap resetGrid getLayerCongestionMap getDirectionCongestionMap
