@@ -1,0 +1,12 @@
+{
+  "design": "gcd_nangate45",
+  "N": 357,
+  "gs": 6,
+  "max_layer": "metal3",
+  "total_overflow": 37,
+  "best_r": 4.7789538604175705,
+  "best_r_over_diag": 3.0,
+  "R2_eta_demand": 0.8086755274310166,
+  "R2_rudy_demand": 0.8608060399309845,
+  "eta_wins": false
+}

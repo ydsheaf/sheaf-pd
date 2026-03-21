@@ -1,0 +1,11 @@
+[INFO ODB-0227] LEF file: /mnt/storage1/users/ydwu/claude_projects/OpenROAD-flow-scripts/flow/platforms/sky130hd/lef/sky130_fd_sc_hd.tlef, created 13 layers, 25 vias
+[INFO ODB-0227] LEF file: /mnt/storage1/users/ydwu/claude_projects/OpenROAD-flow-scripts/flow/platforms/sky130hd/lef/sky130_fd_sc_hd_merged.lef, created 441 library cells
+[INFO ODB-0127] Reading DEF file: /mnt/storage1/users/ydwu/claude_projects/OpenROAD-flow-scripts/flow/tutorials/scripts/drt/gcd/4_cts.def
+[INFO ODB-0128] Design: gcd
+[INFO ODB-0130]     Created 54 pins.
+[INFO ODB-0131]     Created 9135 components and 36024 component-terminals.
+[INFO ODB-0132]     Created 2 special nets and 34794 connections.
+[INFO ODB-0133]     Created 406 nets and 1230 connections.
+[INFO ODB-0134] Finished DEF file: /mnt/storage1/users/ydwu/claude_projects/OpenROAD-flow-scripts/flow/tutorials/scripts/drt/gcd/4_cts.def
+[ERROR GRT-0005] Layer metal1 not found.
+Error: _congested_gcd_sky130.tcl, 5 GRT-0005
