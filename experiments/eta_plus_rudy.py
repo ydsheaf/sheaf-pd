@@ -194,6 +194,154 @@ def _fit_r2(X, y):
     return r2_score(y, reg.predict(X)), reg
 
 
+def _crossval_r2(X, y, fold_mask):
+    """2-fold cross-validated R².
+
+    fold_mask: boolean array, True = fold 1, False = fold 0.
+    Returns average held-out R² across the two folds.
+    """
+    if X.ndim == 1:
+        X = X.reshape(-1, 1)
+    if np.std(X, axis=0).max() < 1e-10:
+        return 0.0
+
+    scores = []
+    for train_mask, test_mask in [(fold_mask, ~fold_mask), (~fold_mask, fold_mask)]:
+        if train_mask.sum() < 2 or test_mask.sum() < 2:
+            return 0.0
+        reg = LinearRegression().fit(X[train_mask], y[train_mask])
+        y_pred = reg.predict(X[test_mask])
+        scores.append(r2_score(y[test_mask], y_pred))
+    return float(np.mean(scores))
+
+
+def run_crossval_regression(features, design_name):
+    """Cross-validated comparison: η, RUDY, cell_density, and combinations.
+
+    Splits G-cells into 2 folds (odd vs even flattened index) and reports
+    average held-out R². Also reports results with a fixed theory-guided
+    radius r = 3·diag (per Theorem G'').
+    """
+    print(f"\n{'='*70}")
+    print(f"CROSS-VALIDATED η + RUDY: {design_name}")
+    print(f"{'='*70}")
+
+    mask = features["ncells_map"].ravel() >= 2
+    if mask.sum() < 5:
+        print("  Not enough active G-cells")
+        return None
+
+    y = features["demand_map"].ravel()[mask]
+    rudy = features["rudy_map"].ravel()[mask].reshape(-1, 1)
+    cell_dens = features["cell_density_map"].ravel()[mask].reshape(-1, 1)
+    ncells = features["ncells_map"].ravel()[mask].reshape(-1, 1)
+
+    if np.std(y) < 1e-10:
+        print("  No variance in demand")
+        return None
+
+    # Create 2-fold split: odd vs even index among active cells
+    n_active = mask.sum()
+    fold_mask = np.array([i % 2 == 0 for i in range(n_active)])
+    print(f"  Active G-cells: {n_active}  (fold 0: {(~fold_mask).sum()}, fold 1: {fold_mask.sum()})")
+
+    # Baselines
+    cv_r2_rudy = _crossval_r2(rudy, y, fold_mask)
+    cv_r2_cell_dens = _crossval_r2(cell_dens, y, fold_mask)
+
+    print(f"\n  {'Predictor':>35s}  {'CV-R²':>8s}  {'Δ vs RUDY':>10s}")
+    print(f"  {'─'*60}")
+    print(f"  {'RUDY alone (net-based)':>35s}  {cv_r2_rudy:>8.4f}  {'baseline':>10s}")
+    print(f"  {'cell_density alone':>35s}  {cv_r2_cell_dens:>8.4f}  {cv_r2_cell_dens-cv_r2_rudy:>+10.4f}")
+    print()
+
+    best_cv_r2 = cv_r2_rudy
+    best_r = None
+    cv_results = []
+
+    # Fixed theory-guided radius: r = 3·diag (Theorem G'')
+    diag = features["diag"]
+    r_fixed = 3.0 * diag
+    # Find the closest available radius
+    closest_r = min(features["r_values"], key=lambda r: abs(r - r_fixed))
+    r_fixed_ratio = closest_r / diag
+
+    for r in features["r_values"]:
+        eta = features["eta_maps"][r].ravel()[mask].reshape(-1, 1)
+        dbar = features["dbar_maps"][r].ravel()[mask].reshape(-1, 1)
+        r_over_diag = r / diag
+
+        cv_r2_eta = _crossval_r2(eta, y, fold_mask)
+        cv_r2_eta_rudy = _crossval_r2(np.hstack([eta, rudy]), y, fold_mask)
+        cv_r2_eta_cd = _crossval_r2(np.hstack([eta, cell_dens]), y, fold_mask)
+        cv_r2_eta_rudy_cd = _crossval_r2(np.hstack([eta, rudy, cell_dens]), y, fold_mask)
+        cv_r2_all = _crossval_r2(np.hstack([eta, rudy, cell_dens, dbar, ncells]), y, fold_mask)
+
+        is_fixed = " [FIXED r=3·diag]" if abs(r - closest_r) < 1e-6 and abs(r_fixed_ratio - 3.0) < 0.5 else ""
+        print(f"  --- r = {r_over_diag:.1f}·diag{is_fixed} ---")
+        print(f"  {'η alone':>35s}  {cv_r2_eta:>8.4f}  {cv_r2_eta-cv_r2_rudy:>+10.4f}")
+        print(f"  {'η + RUDY':>35s}  {cv_r2_eta_rudy:>8.4f}  {cv_r2_eta_rudy-cv_r2_rudy:>+10.4f}")
+        print(f"  {'η + cell_density':>35s}  {cv_r2_eta_cd:>8.4f}  {cv_r2_eta_cd-cv_r2_rudy:>+10.4f}")
+        print(f"  {'η + RUDY + cell_density':>35s}  {cv_r2_eta_rudy_cd:>8.4f}  {cv_r2_eta_rudy_cd-cv_r2_rudy:>+10.4f}")
+        print(f"  {'ALL (η+RUDY+cd+Δ̄+n)':>35s}  {cv_r2_all:>8.4f}  {cv_r2_all-cv_r2_rudy:>+10.4f}")
+        print()
+
+        entry = {
+            "r": float(r),
+            "r_over_diag": float(r_over_diag),
+            "cv_r2_eta": float(cv_r2_eta),
+            "cv_r2_rudy": float(cv_r2_rudy),
+            "cv_r2_cell_density": float(cv_r2_cell_dens),
+            "cv_r2_eta_rudy": float(cv_r2_eta_rudy),
+            "cv_r2_eta_cell_density": float(cv_r2_eta_cd),
+            "cv_r2_eta_rudy_cell_density": float(cv_r2_eta_rudy_cd),
+            "cv_r2_all": float(cv_r2_all),
+            "is_fixed_radius": bool(abs(r - closest_r) < 1e-6 and abs(r_fixed_ratio - 3.0) < 0.5),
+        }
+        cv_results.append(entry)
+
+        if cv_r2_eta_rudy > best_cv_r2:
+            best_cv_r2 = cv_r2_eta_rudy
+            best_r = r
+
+    # Summary
+    print(f"  {'─'*60}")
+    if best_r:
+        r_d = best_r / diag
+        print(f"  CROSS-VALIDATED: η ADDS INFORMATION")
+        print(f"    best CV-R²(η+RUDY) = {best_cv_r2:.4f} at r={r_d:.1f}·diag")
+        print(f"    improvement over RUDY alone: {best_cv_r2 - cv_r2_rudy:+.4f}")
+    else:
+        print(f"  CROSS-VALIDATED: η does NOT add information beyond RUDY")
+
+    # Report fixed radius result
+    fixed_entry = [e for e in cv_results if e["is_fixed_radius"]]
+    if fixed_entry:
+        fe = fixed_entry[0]
+        print(f"\n  FIXED r=3·diag (theory-guided, Theorem G''):")
+        print(f"    CV-R²(η+RUDY) = {fe['cv_r2_eta_rudy']:.4f}, "
+              f"Δ vs RUDY = {fe['cv_r2_eta_rudy'] - cv_r2_rudy:+.4f}")
+
+    output = {
+        "design": design_name,
+        "gs": features["gs"],
+        "method": "2-fold cross-validation (odd/even index)",
+        "cv_r2_rudy_alone": float(cv_r2_rudy),
+        "cv_r2_cell_density_alone": float(cv_r2_cell_dens),
+        "best_cv_r2_combined": float(best_cv_r2),
+        "best_r": float(best_r) if best_r else None,
+        "improvement": float(best_cv_r2 - cv_r2_rudy),
+        "per_radius": cv_results,
+    }
+
+    json_path = os.path.join(RESULTS_DIR, f"eta_plus_rudy_cv_{design_name}.json")
+    with open(json_path, "w") as f:
+        json.dump(output, f, indent=2)
+    print(f"  Saved: {json_path}")
+
+    return output
+
+
 def run_regression(features, design_name):
     """Compare prediction accuracy: η, RUDY, cell_density, and combinations."""
     print(f"\n{'='*70}")
@@ -370,6 +518,7 @@ def main():
     features = compute_features(args.design, gs=args.gs)
     if features:
         run_regression(features, args.design)
+        run_crossval_regression(features, args.design)
 
 
 if __name__ == "__main__":
