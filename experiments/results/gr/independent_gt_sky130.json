@@ -1,0 +1,76 @@
+{
+  "design": "gcd_sky130",
+  "ground_truth": "GRT gcell usage (guide-based, congested met2-met3)",
+  "source_file": "gcell_overflow_congested_gcd_sky130.json",
+  "grt_grid": "39x39",
+  "grt_total_overflow": 5963,
+  "dbu_per_micron": 1000,
+  "cell_diag_um": 4.215068208226292,
+  "n_cells": 370,
+  "gs": 6,
+  "n_active_gcells": 31,
+  "r_factors": [
+    1.5,
+    2.0,
+    3.0,
+    4.0,
+    5.0
+  ],
+  "method": "2-fold CV (odd/even index), density alone vs eta+density",
+  "cv_r2_density": 0.8682480023710164,
+  "best_cv_r2_eta_density": 0.8700307628307211,
+  "best_r_factor": 3.0,
+  "best_delta_pct": 0.1782760459704713,
+  "per_radius": [
+    {
+      "r_factor": 1.5,
+      "r": 6.322602312339438,
+      "cv_r2_eta_density": 0.8126236880188284,
+      "cv_r2_eta_alone": 0.35106434524052943,
+      "delta": -0.055624314352187954,
+      "delta_pct": -5.562431435218795,
+      "eta_max": 0.10227272727272728,
+      "eta_mean_active": 0.00843899976666225
+    },
+    {
+      "r_factor": 2.0,
+      "r": 8.430136416452584,
+      "cv_r2_eta_density": 0.8666143474289069,
+      "cv_r2_eta_alone": 0.5350661700183459,
+      "delta": -0.0016336549421095414,
+      "delta_pct": -0.16336549421095414,
+      "eta_max": 0.37254901960784315,
+      "eta_mean_active": 0.043547104585850996
+    },
+    {
+      "r_factor": 3.0,
+      "r": 12.645204624678875,
+      "cv_r2_eta_density": 0.8700307628307211,
+      "cv_r2_eta_alone": 0.6030230705272699,
+      "delta": 0.001782760459704713,
+      "delta_pct": 0.1782760459704713,
+      "eta_max": 0.6697819314641744,
+      "eta_mean_active": 0.09600053393297829
+    },
+    {
+      "r_factor": 4.0,
+      "r": 16.860272832905167,
+      "cv_r2_eta_density": 0.8645816890868122,
+      "cv_r2_eta_alone": 0.676463399717358,
+      "delta": -0.0036663132842041923,
+      "delta_pct": -0.36663132842041923,
+      "eta_max": 0.791907514450867,
+      "eta_mean_active": 0.1379926458803498
+    },
+    {
+      "r_factor": 5.0,
+      "r": 21.07534104113146,
+      "cv_r2_eta_density": 0.8602193381280836,
+      "cv_r2_eta_alone": 0.748135040881781,
+      "delta": -0.008028664242932804,
+      "delta_pct": -0.8028664242932804,
+      "eta_max": 0.8432510885341074,
+      "eta_mean_active": 0.18260771808204052
+    }
+  ]
+}
