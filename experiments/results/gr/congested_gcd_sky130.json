@@ -1,0 +1,12 @@
+{
+  "design": "gcd_sky130",
+  "N": 9135,
+  "gs": 6,
+  "max_layer": "met3",
+  "total_overflow": 3990,
+  "best_r": 0.0,
+  "best_r_over_diag": 0.0,
+  "R2_eta_demand": 0.0,
+  "R2_rudy_demand": 0.0,
+  "eta_wins": false
+}
