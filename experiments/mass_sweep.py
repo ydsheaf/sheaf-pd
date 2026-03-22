@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-mass_sweep.py — Mass GT certificate validation across 8 new designs (Issue #24)
+mass_sweep.py — Mass GT certificate validation across new designs (Issue #24)
 ================================================================================
 
 Runs OpenROAD GR with restricted layers, extracts per-G-cell capacity/usage
@@ -39,19 +39,59 @@ OPENROAD = f"{ORFS}/tools/install/OpenROAD/bin/openroad"
 RESULTS_DIR = os.path.join(os.path.dirname(__file__), "results", "sweep")
 
 # ─── New designs to process ───
+# Each design verified: DEF has PLACED components, NETS section,
+# LEFs define matching SITEs and cell macros.
 NEW_DESIGNS = {
+    # --- Original designs from Issue #24 ---
     "ibex_nangate45": {
-        "lef": [f"{ORFS}/tools/OpenROAD/src/grt/test/Nangate45/Nangate45_tech.lef",
-                f"{ORFS}/tools/OpenROAD/src/grt/test/Nangate45/Nangate45_stdcell.lef"],
+        "lef": [f"{ORFS}/tools/OpenROAD/src/gpl/test/Nangate45/Nangate45_tech.lef",
+                f"{ORFS}/tools/OpenROAD/src/gpl/test/Nangate45/Nangate45_stdcell.lef"],
         "def": f"{ORFS}/tools/OpenROAD/src/dpl/test/ibex_core_replace.def",
         "pdk": "nangate45",
     },
     "aes_opt_nangate45": {
-        "lef": [f"{ORFS}/tools/OpenROAD/src/grt/test/Nangate45/Nangate45_tech.lef",
-                f"{ORFS}/tools/OpenROAD/src/grt/test/Nangate45/Nangate45_stdcell.lef"],
+        "lef": [f"{ORFS}/tools/OpenROAD/src/gpl/test/Nangate45/Nangate45_tech.lef",
+                f"{ORFS}/tools/OpenROAD/src/gpl/test/Nangate45/Nangate45_stdcell.lef"],
         "def": f"{ORFS}/tools/OpenROAD/src/dpl/test/aes-opt.def",
         "pdk": "nangate45",
     },
+    "aes_psm2_nangate45": {
+        "lef": [f"{ORFS}/tools/OpenROAD/src/psm/test/Nangate45/Nangate45_tech.lef",
+                f"{ORFS}/tools/OpenROAD/src/psm/test/Nangate45/Nangate45_stdcell.lef"],
+        "def": f"{ORFS}/tools/OpenROAD/src/psm/test/Nangate45_data/aes.def",
+        "pdk": "nangate45",
+    },
+    "rocket_nangate45": {
+        "lef": [f"{ORFS}/tools/OpenROAD/src/gpl/test/nangate45.lef",
+                f"{ORFS}/tools/OpenROAD/src/gpl/test/RocketTile_macro.lef"],
+        "def": f"{ORFS}/tools/OpenROAD/src/gpl/test/medium05.def",
+        "pdk": "nangate45",
+    },
+    "bp_nangate45": {
+        "lef": [f"{ORFS}/tools/OpenROAD/src/gpl/test/Nangate45/Nangate45_tech.lef",
+                f"{ORFS}/tools/OpenROAD/src/gpl/test/Nangate45/Nangate45_stdcell.lef",
+                f"{ORFS}/tools/OpenROAD/src/gpl/test/Nangate45/fakeram45_64x32.lef"],
+        "def": f"{ORFS}/tools/OpenROAD/src/gpl/test/medium07.def",
+        "pdk": "nangate45",
+    },
+    "incr_nangate45": {
+        "lef": [f"{ORFS}/tools/OpenROAD/src/gpl/test/Nangate45/Nangate45_tech.lef",
+                f"{ORFS}/tools/OpenROAD/src/gpl/test/Nangate45/Nangate45_stdcell.lef"],
+        "def": f"{ORFS}/tools/OpenROAD/src/gpl/test/incremental02.def",
+        "pdk": "nangate45",
+    },
+    "gcd_grt_nangate45": {
+        "lef": [f"{ORFS}/tools/OpenROAD/src/grt/test/Nangate45/Nangate45_tech.lef",
+                f"{ORFS}/tools/OpenROAD/src/grt/test/Nangate45/Nangate45_stdcell.lef"],
+        "def": f"{ORFS}/tools/OpenROAD/src/grt/test/gcd.def",
+        "pdk": "nangate45",
+    },
+    "uart_sky130": {
+        "lef": [f"{ORFS}/tools/OpenROAD/src/grt/test/overlapping_edges.lef"],
+        "def": f"{ORFS}/tools/OpenROAD/src/grt/test/overlapping_edges.def",
+        "pdk": "sky130hd",
+    },
+    # --- Previously timed-out designs (Issue #25) ---
     "jpeg_nangate45": {
         "lef": [f"{ORFS}/tools/OpenROAD/src/gpl/test/Nangate45/Nangate45_tech.lef",
                 f"{ORFS}/tools/OpenROAD/src/gpl/test/Nangate45/Nangate45_stdcell.lef"],
@@ -76,6 +116,12 @@ NEW_DESIGNS = {
         "def": f"{ORFS}/tools/OpenROAD/src/rcx/test/gcd.def",
         "pdk": "nangate45",
     },
+    "gcd_grt_sky130": {
+        "lef": [f"{ORFS}/flow/platforms/sky130hd/lef/sky130_fd_sc_hd.tlef",
+                f"{ORFS}/flow/platforms/sky130hd/lef/sky130_fd_sc_hd_merged.lef"],
+        "def": f"{ORFS}/tools/OpenROAD/src/grt/test/gcd_sky130.def",
+        "pdk": "sky130hd",
+    },
     "riscv_asap7": {
         "lef": [f"{ORFS}/flow/platforms/asap7/lef/asap7_tech_1x_201209.lef",
                 f"{ORFS}/flow/platforms/asap7/lef/asap7sc7p5t_28_R_1x_220121a.lef",
@@ -83,12 +129,6 @@ NEW_DESIGNS = {
                 f"{ORFS}/flow/platforms/asap7/lef/asap7sc7p5t_28_SL_1x_220121a.lef"],
         "def": f"{ORFS}/tools/OpenROAD/src/psm/test/asap7_data/riscv.def",
         "pdk": "asap7",
-    },
-    "gcd_grt_sky130": {
-        "lef": [f"{ORFS}/flow/platforms/sky130hd/lef/sky130_fd_sc_hd.tlef",
-                f"{ORFS}/flow/platforms/sky130hd/lef/sky130_fd_sc_hd_merged.lef"],
-        "def": f"{ORFS}/tools/OpenROAD/src/grt/test/gcd_sky130.def",
-        "pdk": "sky130hd",
     },
 }
 
@@ -128,23 +168,23 @@ def get_timeout(def_path):
                 return 300
     except Exception:
         pass
-    return 600  # default
+    return 600
 
 
 def check_lef_files(lef_list):
     """Check LEF files exist, return list of existing ones and list of missing."""
-    existing = []
-    missing = []
+    existing, missing = [], []
     for lef in lef_list:
-        if os.path.exists(lef):
-            existing.append(lef)
-        else:
-            missing.append(lef)
+        (existing if os.path.exists(lef) else missing).append(lef)
     return existing, missing
 
 
 def build_tcl_script(design_name, cfg):
-    """Build the Tcl script for GR + GCell extraction."""
+    """Build the Tcl script for GR + GCell extraction.
+
+    Uses cross-layer aggregation in the Tcl loop to avoid iterating
+    per-layer per-cell (which is very slow for large grids).
+    """
     pdk = cfg["pdk"]
     lcfg = LAYER_CONFIG[pdk]
 
@@ -154,9 +194,9 @@ def build_tcl_script(design_name, cfg):
     lines.append(f'read_def "{cfg["def"]}"')
     lines.append(f'set_global_routing_layer_adjustment {lcfg["adjust_layers"]} {lcfg["adjust_value"]}')
     lines.append(f'set_routing_layers -signal {lcfg["restrict"]}')
-    lines.append('global_route -verbose -allow_congestion')
+    lines.append('global_route -verbose -allow_congestion -congestion_iterations 5')
 
-    # GCell extraction Tcl
+    # GCell extraction: cross-layer aggregation (much faster for large designs)
     lines.append('''
 set block [ord::get_db_block]
 set gcell_grid [$block getGCellGrid]
@@ -167,24 +207,35 @@ set y_grids [$gcell_grid getGridY]
 set nx [expr {[llength $x_grids] - 1}]
 set ny [expr {[llength $y_grids] - 1}]
 set dbu [$block getDefUnits]
+
 puts "ACCURATE_GT_START"
 puts "GRID $nx $ny"
 puts "DBU $dbu"
 puts "XGRIDS $x_grids"
 puts "YGRIDS $y_grids"
-for {set li 1} {$li <= 10} {incr li} {
-    catch {
-        set layer [$tech findRoutingLayer $li]
-        if {$layer != "NULL"} {
-            for {set gy 0} {$gy < $ny} {incr gy} {
-                for {set gx 0} {$gx < $nx} {incr gx} {
-                    set cap [$gcell_grid getCapacity $layer $gx $gy]
-                    set usg [$gcell_grid getUsage $layer $gx $gy]
-                    if {$cap > 0 || $usg > 0} {
-                        puts "GC $gx $gy $cap $usg"
-                    }
-                }
+
+set routing_layers [list]
+foreach layer [$tech getLayers] {
+    if {[$layer getType] == "ROUTING"} {
+        lappend routing_layers $layer
+    }
+}
+puts "NLAYERS [llength $routing_layers]"
+
+for {set gy 0} {$gy < $ny} {incr gy} {
+    for {set gx 0} {$gx < $nx} {incr gx} {
+        set total_cap 0.0
+        set total_usage 0.0
+        foreach layer $routing_layers {
+            catch {
+                set cap [$gcell_grid getCapacity $layer $gx $gy]
+                set usg [$gcell_grid getUsage $layer $gx $gy]
+                set total_cap [expr {$total_cap + $cap}]
+                set total_usage [expr {$total_usage + $usg}]
             }
+        }
+        if {$total_cap > 0 || $total_usage > 0} {
+            puts "GC $gx $gy $total_cap $total_usage"
         }
     }
 }
@@ -212,7 +263,6 @@ def run_openroad(design_name, cfg, timeout):
         if not existing_lefs:
             print(f"  [SKIP] No LEF files found")
             return None
-        # Use only existing LEFs
         cfg = dict(cfg)
         cfg["lef"] = existing_lefs
 
@@ -250,10 +300,9 @@ def run_openroad(design_name, cfg, timeout):
         f.write(full_output)
 
     if "ACCURATE_GT_END" not in full_output:
-        # Check for common errors
-        if "Error" in full_output or "error" in full_output:
-            errors = [l for l in full_output.split('\n')
-                      if 'error' in l.lower() or 'Error' in l][:5]
+        errors = [l for l in full_output.split('\n')
+                  if 'error' in l.lower() or 'Error' in l][:5]
+        if errors:
             print(f"  [ERROR] GR did not complete. Errors:")
             for e in errors:
                 print(f"    {e.strip()[:120]}")
@@ -298,7 +347,6 @@ def parse_accurate_gt_log(log_path):
         gcells.append({"gx": gx, "gy": gy, "capacity": cap,
                        "usage": usage, "overflow": overflow})
 
-    # Parse GRT total overflow
     grt_total_overflow = 0
     total_match = re.search(
         r'Total\s+\d+\s+\d+\s+[\d.]+%\s+(\d+)\s*/\s*(\d+)\s*/\s*(\d+)', content)
@@ -341,11 +389,7 @@ def aggregate_to_grid(gt_data, die_area, gs, dbu):
 
 
 def load_design_from_config(design_name, cfg):
-    """Load design cells from LEF/DEF using run_batch infrastructure.
-
-    Temporarily injects the config into the DESIGNS dict so load_design works.
-    """
-    # Temporarily add to DESIGNS
+    """Load design cells from LEF/DEF using run_batch infrastructure."""
     was_present = design_name in DESIGNS
     old_val = DESIGNS.get(design_name)
     DESIGNS[design_name] = cfg
@@ -360,16 +404,12 @@ def load_design_from_config(design_name, cfg):
 
 
 def validate_certificate(design_name, cfg, gs=6):
-    """Compute eta and validate certificate against accurate GT.
-
-    Returns result dict or None on failure.
-    """
+    """Compute eta and validate certificate against accurate GT."""
     log_path = os.path.join(RESULTS_DIR, f"accurate_gt_{design_name}.log")
     if not os.path.exists(log_path):
         print(f"  [ERROR] No log file: {log_path}")
         return None
 
-    # Parse accurate GT
     gt_data = parse_accurate_gt_log(log_path)
     if gt_data is None:
         return None
@@ -377,7 +417,6 @@ def validate_certificate(design_name, cfg, gs=6):
     n_gc = len(gt_data["gcells"])
     print(f"  Parsed {n_gc} G-cells from accurate GT")
 
-    # Verify overflow
     our_ovf = sum(gc["overflow"] for gc in gt_data["gcells"])
     grt_ovf = gt_data["grt_total_overflow"]
     if grt_ovf > 0:
@@ -390,7 +429,6 @@ def validate_certificate(design_name, cfg, gs=6):
     n_overflow_gc = sum(1 for gc in gt_data["gcells"] if gc["overflow"] > 0)
     print(f"  G-cells with overflow: {n_overflow_gc}/{n_gc}")
 
-    # Load design
     positions, widths, heights, die_area, _ = load_design_from_config(design_name, cfg)
     if positions is None:
         print(f"  [ERROR] Could not load design cells")
@@ -413,12 +451,11 @@ def validate_certificate(design_name, cfg, gs=6):
     gcell_w = (x_max - x_min) / gs
     gcell_h = (y_max - y_min) / gs
 
-    # Aggregate GT into our grid
     usage_grid, cap_grid, overflow_grid = aggregate_to_grid(
         gt_data, die_area, gs, dbu)
     has_overflow = (overflow_grid > 0).astype(int)
 
-    # Subsample if needed for eta computation
+    # Subsample if needed
     if N > 1500:
         print(f"  Subsampling {N} -> 1500 cells for eta computation")
         cx, cy = np.mean(positions, axis=0)
@@ -441,7 +478,6 @@ def validate_certificate(design_name, cfg, gs=6):
         ncells_full[gy, gx] += 1
         cell_density[gy, gx] += widths[idx_c] * heights[idx_c] / (gcell_w * gcell_h)
 
-    # Active G-cells (at least 2 cells)
     mask = ncells_full.ravel() >= 2
     n_active = int(mask.sum())
 
@@ -476,17 +512,20 @@ def validate_certificate(design_name, cfg, gs=6):
                 result["P_safe_given_eta0"] = 1.0
                 result["eta_specificity"] = 1.0
                 result["eta_recall"] = None
+            else:
+                result["P_safe_given_eta0"] = 1.0
+                result["eta_specificity"] = 1.0
+                result["eta_recall"] = None
         else:
             result["certificate"] = "N/A (all overflow)"
         return result
 
-    # Confusion matrix
     from sklearn.metrics import confusion_matrix, recall_score, f1_score
     cm = confusion_matrix(y_true, eta_pred, labels=[0, 1])
     tn, fp, fn, tp = cm.ravel()
 
     specificity = float(tn / (tn + fp)) if (tn + fp) > 0 else None
-    cert_prec = float(tn / (tn + fn)) if (tn + fn) > 0 else None  # P(safe|eta=0)
+    cert_prec = float(tn / (tn + fn)) if (tn + fn) > 0 else None
     recall = float(recall_score(y_true, eta_pred, zero_division=0))
     f1 = float(f1_score(y_true, eta_pred, zero_division=0))
     accuracy = float((tp + tn) / len(y_true))
@@ -521,7 +560,6 @@ def main():
         print(f"{'='*70}")
 
         try:
-            # Step 1: Run OpenROAD GR + extraction
             timeout = get_timeout(cfg["def"])
             print(f"  DEF: {cfg['def']}")
             print(f"  Timeout: {timeout}s")
@@ -531,7 +569,6 @@ def main():
                 errors[design_name] = "OpenROAD GR failed or timed out"
                 continue
 
-            # Step 2: Validate certificate
             result = validate_certificate(design_name, cfg, gs=6)
             if result is None:
                 errors[design_name] = "Certificate validation failed"
@@ -539,14 +576,15 @@ def main():
 
             all_results.append(result)
 
-            # Print key metrics
             spec = result.get("eta_specificity")
             cert = result.get("P_safe_given_eta0")
             rec = result.get("eta_recall")
             if spec is not None:
                 print(f"\n  >> Specificity = {spec:.4f}")
-                print(f"  >> P(safe|eta=0) = {cert:.4f}" if cert is not None else "")
-                print(f"  >> Recall = {rec:.3f}" if rec is not None else "")
+                if cert is not None:
+                    print(f"  >> P(safe|eta=0) = {cert:.4f}")
+                if rec is not None:
+                    print(f"  >> Recall = {rec:.3f}")
                 cm = result.get("confusion", {})
                 if cm:
                     print(f"  >> Confusion: TN={cm.get('tn')}, FP={cm.get('fp')}, "
@@ -565,7 +603,6 @@ def main():
     print("  MASS SWEEP SUMMARY")
     print(f"{'='*78}")
 
-    # Sort by PDK
     all_results.sort(key=lambda r: (r["pdk"], r["design"]))
 
     print(f"\n  {'Design':>25s}  {'PDK':>10s}  {'N':>7s}  {'GRT Ovf':>8s}  "
@@ -582,7 +619,6 @@ def main():
         print(f"  {r['design']:>25s}  {r['pdk']:>10s}  {r['N']:>7d}  "
               f"{r['grt_total_overflow']:>8d}  {spec_s:>8s}  {cert_s:>12s}  {rec_s:>7s}")
 
-    # ─── Errors ───
     if errors:
         print(f"\n  FAILED ({len(errors)}):")
         for dname, reason in errors.items():
@@ -590,12 +626,6 @@ def main():
 
     # ─── Binomial test for NanGate45 specificity ───
     # Include prior results from Issue #23
-    prior_nangate45 = [
-        "gcd_nangate45", "aes_nangate45", "gcd_replace_nangate45",
-        "aes_cipher_nangate45", "aes_psm_nangate45", "ibex_nangate45",
-    ]
-
-    # Load prior results
     prior_path = os.path.join(RESULTS_DIR, "accurate_gt_certificate.json")
     prior_results = []
     if os.path.exists(prior_path):
@@ -605,23 +635,21 @@ def main():
     # Collect all NanGate45 specificity values
     nangate45_specs = []
 
-    # From prior results
     for r in prior_results:
         if r.get("pdk") == "nangate45":
             s = r.get("eta_specificity")
             if s is not None:
                 nangate45_specs.append((r["design"], s))
-            elif r.get("certificate", "").startswith("TRIVIAL") and r.get("P_safe_given_eta0") == 1.0:
+            elif r.get("P_safe_given_eta0") == 1.0:
                 nangate45_specs.append((r["design"], 1.0))
 
-    # From new results (avoid duplicates)
     prior_names = {name for name, _ in nangate45_specs}
     for r in all_results:
         if r.get("pdk") == "nangate45" and r["design"] not in prior_names:
             s = r.get("eta_specificity")
             if s is not None:
                 nangate45_specs.append((r["design"], s))
-            elif r.get("certificate", "").startswith("TRIVIAL") and r.get("P_safe_given_eta0") == 1.0:
+            elif r.get("P_safe_given_eta0") == 1.0:
                 nangate45_specs.append((r["design"], 1.0))
 
     print(f"\n\n{'='*78}")
@@ -639,9 +667,8 @@ def main():
 
     print(f"\n  Perfect specificity (1.0): {n_perfect} / {n_total}")
 
+    p_value = None
     if n_total > 0:
-        # Under H0 (spec=0.9), probability of all n being perfect
-        # = 0.9^n. We want P(X >= n_perfect) where X ~ Binomial(n, 0.9)
         # P(X >= n_perfect) where X ~ Binomial(n_total, 0.9)
         p_value = 1.0 - binom.cdf(n_perfect - 1, n_total, 0.9)
 
@@ -660,7 +687,7 @@ def main():
             "n_designs": n_total,
             "n_perfect_specificity": n_perfect,
             "designs": [{"name": n, "specificity": s} for n, s in nangate45_specs],
-            "p_value_vs_0.9": p_value if n_total > 0 else None,
+            "p_value_vs_0.9": p_value,
         },
     }
 

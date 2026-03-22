@@ -24,19 +24,67 @@
         "fn": 4,
         "tp": 4
       }
+    },
+    {
+      "design": "gcd_grt_nangate45",
+      "pdk": "nangate45",
+      "N": 508,
+      "gs": 6,
+      "r_over_diag": 2.0,
+      "grt_total_overflow": 252,
+      "accurate_gt_overflow": 211.0,
+      "overflow_ratio": 0.8373015873015873,
+      "n_gcells_with_overflow": 165,
+      "n_active": 34,
+      "n_overflow": 4,
+      "n_clean": 30,
+      "eta_specificity": 0.9,
+      "P_safe_given_eta0": 1.0,
+      "eta_recall": 1.0,
+      "eta_f1": 0.7272727272727273,
+      "eta_accuracy": 0.9117647058823529,
+      "confusion": {
+        "tn": 27,
+        "fp": 3,
+        "fn": 0,
+        "tp": 4
+      }
+    },
+    {
+      "design": "uart_sky130",
+      "pdk": "sky130hd",
+      "N": 10315,
+      "gs": 6,
+      "r_over_diag": 2.0,
+      "grt_total_overflow": 38972,
+      "accurate_gt_overflow": 38302.0,
+      "overflow_ratio": 0.9828081699681823,
+      "n_gcells_with_overflow": 4980,
+      "n_active": 36,
+      "n_overflow": 35,
+      "n_clean": 1,
+      "eta_specificity": 1.0,
+      "P_safe_given_eta0": 0.038461538461538464,
+      "eta_recall": 0.2857142857142857,
+      "eta_f1": 0.4444444444444444,
+      "eta_accuracy": 0.3055555555555556,
+      "confusion": {
+        "tn": 1,
+        "fp": 0,
+        "fn": 25,
+        "tp": 10
+      }
     }
   ],
   "errors": {
     "ibex_nangate45": "OpenROAD GR failed or timed out",
-    "jpeg_nangate45": "OpenROAD GR failed or timed out",
-    "swerv_nangate45": "OpenROAD GR failed or timed out",
-    "uart_nangate45": "OpenROAD GR failed or timed out",
-    "gcd_rcx_nangate45": "OpenROAD GR failed or timed out",
-    "riscv_asap7": "OpenROAD GR failed or timed out",
-    "gcd_grt_sky130": "OpenROAD GR failed or timed out"
+    "aes_psm2_nangate45": "OpenROAD GR failed or timed out",
+    "rocket_nangate45": "OpenROAD GR failed or timed out",
+    "bp_nangate45": "OpenROAD GR failed or timed out",
+    "incr_nangate45": "OpenROAD GR failed or timed out"
   },
   "nangate45_binomial": {
-    "n_designs": 2,
+    "n_designs": 3,
     "n_perfect_specificity": 2,
     "designs": [
       {
@@ -46,8 +94,12 @@
       {
         "name": "aes_opt_nangate45",
         "specificity": 1.0
+      },
+      {
+        "name": "gcd_grt_nangate45",
+        "specificity": 0.9
       }
     ],
-    "p_value_vs_0.9": 0.81
+    "p_value_vs_0.9": 0.972
   }
 }
