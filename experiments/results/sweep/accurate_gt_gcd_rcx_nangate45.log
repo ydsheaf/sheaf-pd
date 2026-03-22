@@ -1,0 +1,104 @@
+[INFO ODB-0227] LEF file: /mnt/storage1/users/ydwu/claude_projects/OpenROAD-flow-scripts/tools/OpenROAD/src/rcx/test/Nangate45/Nangate45_tech.lef, created 22 layers, 27 vias
+[INFO ODB-0227] LEF file: /mnt/storage1/users/ydwu/claude_projects/OpenROAD-flow-scripts/tools/OpenROAD/src/rcx/test/Nangate45/Nangate45_stdcell.lef, created 135 library cells
+[INFO ODB-0127] Reading DEF file: /mnt/storage1/users/ydwu/claude_projects/OpenROAD-flow-scripts/tools/OpenROAD/src/rcx/test/gcd.def
+[INFO ODB-0128] Design: gcd
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_0) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_1) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_2) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_3) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_4) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_5) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_6) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_7) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_8) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_9) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_10) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_11) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_12) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_13) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_14) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_15) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_16) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_17) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_18) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_19) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_20) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_21) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_22) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_23) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_24) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_25) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_26) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_27) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_28) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_29) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_30) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_31) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_32) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_33) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_34) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_35) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_36) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_37) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_38) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_39) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_40) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_41) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_42) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_43) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_44) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_45) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_46) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_47) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_48) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_49) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_50) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_51) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_52) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_53) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_54) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_55) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_56) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_57) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_58) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_59) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_60) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_61) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_62) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_63) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_64) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_65) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_66) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_67) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_68) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_69) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_70) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_71) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_72) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_73) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_74) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_75) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_76) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_77) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_78) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_79) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_80) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_81) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_82) statement.
+[WARNING ODB-0155] error: undefined site (unit) referenced in row (ROW_83) statement.
+[WARNING ODB-0165] error: undefined layer (li1) referenced
+[WARNING ODB-0165] error: undefined layer (li1) referenced
+[WARNING ODB-0165] error: undefined layer (met1) referenced
+[WARNING ODB-0165] error: undefined layer (met1) referenced
+[WARNING ODB-0165] error: undefined layer (met2) referenced
+[WARNING ODB-0165] error: undefined layer (met2) referenced
+[WARNING ODB-0165] error: undefined layer (met3) referenced
+[WARNING ODB-0165] error: undefined layer (met3) referenced
+[WARNING ODB-0165] error: undefined layer (met4) referenced
+[WARNING ODB-0165] error: undefined layer (met4) referenced
+[WARNING ODB-0165] error: undefined layer (met5) referenced
+[WARNING ODB-0165] error: undefined layer (met5) referenced
+[WARNING ODB-0171] error: undefined layer (met2) referenced
+[WARNING ODB-0171] error: undefined layer (met3) referenced
+[ERROR ODB-0299] Via via2_FR has only 1 shapes and must have at least three.
+Error: _mass_gcd_rcx_nangate45.tcl, 3 ODB-0299

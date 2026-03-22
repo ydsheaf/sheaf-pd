@@ -1,0 +1,39 @@
+[INFO ODB-0227] LEF file: /mnt/storage1/users/ydwu/claude_projects/OpenROAD-flow-scripts/tools/OpenROAD/src/gpl/test/nangate45.lef, created 22 layers, 27 vias, 134 library cells
+[INFO ODB-0227] LEF file: /mnt/storage1/users/ydwu/claude_projects/OpenROAD-flow-scripts/tools/OpenROAD/src/gpl/test/RocketTile_macro.lef, created 2 library cells
+[INFO ODB-0127] Reading DEF file: /mnt/storage1/users/ydwu/claude_projects/OpenROAD-flow-scripts/tools/OpenROAD/src/gpl/test/medium05.def
+[INFO ODB-0128] Design: RocketTile
+[INFO ODB-0130]     Created 269 pins.
+[INFO ODB-0131]     Created 42485 components and 212838 component-terminals.
+[INFO ODB-0132]     Created 2 special nets and 84970 connections.
+[INFO ODB-0133]     Created 43429 nets and 127844 connections.
+[INFO ODB-0134] Finished DEF file: /mnt/storage1/users/ydwu/claude_projects/OpenROAD-flow-scripts/tools/OpenROAD/src/gpl/test/medium05.def
+[WARNING GRT-0300] Timing is not available, setting critical nets percentage to 0.
+[INFO GRT-0020] Min routing layer: metal2
+[INFO GRT-0021] Max routing layer: metal3
+[INFO GRT-0022] Global adjustment: 0%
+[INFO GRT-0023] Grid origin: (0, 0)
+[INFO GRT-0088] Layer metal1  Track-Pitch = 0.1400  line-2-Via Pitch: 0.1350
+[INFO GRT-0088] Layer metal2  Track-Pitch = 0.1900  line-2-Via Pitch: 0.1400
+[INFO GRT-0088] Layer metal3  Track-Pitch = 0.1400  line-2-Via Pitch: 0.1400
+[INFO GRT-0003] Macros: 2
+[INFO GRT-0004] Blockages: 216
+[INFO GRT-0019] Found 0 clock nets.
+[WARNING GRT-0281] Net clock has a large fanout of 3980 terminals.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 3980
+
+[INFO GRT-0053] Routing resources analysis:
+          Routing      Original      Derated      Resource
+Layer     Direction    Resources     Resources    Reduction (%)
+---------------------------------------------------------------
+metal1     Horizontal          0             0          0.00%
+metal2     Vertical      1807696        320408          82.28%
+metal3     Horizontal    2475593        333615          86.52%
+---------------------------------------------------------------
+
+[INFO GRT-0101] Running extra iterations to remove overflow.
+[INFO GRT-0102] Start extra iteration 1/5
+[INFO GRT-0102] Start extra iteration 2/5
+[INFO GRT-0102] Start extra iteration 3/5
+[ERROR GRT-0228] Horizontal edge usage exceeds the maximum allowed. (260, 256) usage=65535 limit=1500
+Error: _mass_rocket_nangate45.tcl, 6 GRT-0228
