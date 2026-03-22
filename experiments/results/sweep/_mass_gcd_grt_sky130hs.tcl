@@ -1,11 +1,8 @@
-read_lef "/mnt/storage1/users/ydwu/claude_projects/OpenROAD-flow-scripts/flow/platforms/asap7/lef/asap7_tech_1x_201209.lef"
-read_lef "/mnt/storage1/users/ydwu/claude_projects/OpenROAD-flow-scripts/flow/platforms/asap7/lef/asap7sc7p5t_28_R_1x_220121a.lef"
-read_lef "/mnt/storage1/users/ydwu/claude_projects/OpenROAD-flow-scripts/flow/platforms/asap7/lef/asap7sc7p5t_28_L_1x_220121a.lef"
-read_lef "/mnt/storage1/users/ydwu/claude_projects/OpenROAD-flow-scripts/flow/platforms/asap7/lef/asap7sc7p5t_28_SL_1x_220121a.lef"
-read_lef "/mnt/storage1/users/ydwu/claude_projects/OpenROAD-flow-scripts/flow/platforms/asap7/lef/fakeram7_256x32.lef"
-read_def "/mnt/storage1/users/ydwu/claude_projects/OpenROAD-flow-scripts/tools/OpenROAD/src/psm/test/asap7_data/riscv.def"
-set_global_routing_layer_adjustment M1-M9 0.8
-set_routing_layers -signal M2-M3
+read_lef "/mnt/storage1/users/ydwu/claude_projects/OpenROAD-flow-scripts/tools/OpenROAD/src/rcx/test/sky130hs/sky130hs.tlef"
+read_lef "/mnt/storage1/users/ydwu/claude_projects/OpenROAD-flow-scripts/tools/OpenROAD/src/rcx/test/sky130hs/sky130hs_std_cell.lef"
+read_def "/mnt/storage1/users/ydwu/claude_projects/OpenROAD-flow-scripts/tools/OpenROAD/src/grt/test/gcd_sky130.def"
+set_global_routing_layer_adjustment met1-met5 0.95
+set_routing_layers -signal met2-met3
 global_route -verbose -allow_congestion -congestion_iterations 5
 
 set block [ord::get_db_block]

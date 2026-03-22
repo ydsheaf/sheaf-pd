@@ -1,6 +1,9 @@
 read_lef "/mnt/storage1/users/ydwu/claude_projects/OpenROAD-flow-scripts/tools/OpenROAD/src/gpl/test/Nangate45/Nangate45_tech.lef"
 read_lef "/mnt/storage1/users/ydwu/claude_projects/OpenROAD-flow-scripts/tools/OpenROAD/src/gpl/test/Nangate45/Nangate45_stdcell.lef"
 read_lef "/mnt/storage1/users/ydwu/claude_projects/OpenROAD-flow-scripts/tools/OpenROAD/src/gpl/test/Nangate45/fakeram45_64x32.lef"
+read_lef "/mnt/storage1/users/ydwu/claude_projects/OpenROAD-flow-scripts/tools/OpenROAD/src/gpl/test/Nangate45/fakeram45_512x64.lef"
+read_lef "/mnt/storage1/users/ydwu/claude_projects/OpenROAD-flow-scripts/tools/OpenROAD/src/gpl/test/Nangate45/fakeram45_64x7.lef"
+read_lef "/mnt/storage1/users/ydwu/claude_projects/OpenROAD-flow-scripts/tools/OpenROAD/src/gpl/test/Nangate45/fakeram45_64x96.lef"
 read_def "/mnt/storage1/users/ydwu/claude_projects/OpenROAD-flow-scripts/tools/OpenROAD/src/gpl/test/medium07.def"
 set_global_routing_layer_adjustment metal1-metal10 0.8
 set_routing_layers -signal metal2-metal3

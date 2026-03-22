@@ -70,7 +70,10 @@ NEW_DESIGNS = {
     "bp_nangate45": {
         "lef": [f"{ORFS}/tools/OpenROAD/src/gpl/test/Nangate45/Nangate45_tech.lef",
                 f"{ORFS}/tools/OpenROAD/src/gpl/test/Nangate45/Nangate45_stdcell.lef",
-                f"{ORFS}/tools/OpenROAD/src/gpl/test/Nangate45/fakeram45_64x32.lef"],
+                f"{ORFS}/tools/OpenROAD/src/gpl/test/Nangate45/fakeram45_64x32.lef",
+                f"{ORFS}/tools/OpenROAD/src/gpl/test/Nangate45/fakeram45_512x64.lef",
+                f"{ORFS}/tools/OpenROAD/src/gpl/test/Nangate45/fakeram45_64x7.lef",
+                f"{ORFS}/tools/OpenROAD/src/gpl/test/Nangate45/fakeram45_64x96.lef"],
         "def": f"{ORFS}/tools/OpenROAD/src/gpl/test/medium07.def",
         "pdk": "nangate45",
     },
@@ -104,21 +107,17 @@ NEW_DESIGNS = {
         "def": f"{ORFS}/tools/OpenROAD/src/gpl/test/medium04.def",
         "pdk": "nangate45",
     },
-    "uart_nangate45": {
-        "lef": [f"{ORFS}/tools/OpenROAD/src/grt/test/Nangate45/Nangate45_tech.lef",
-                f"{ORFS}/tools/OpenROAD/src/grt/test/Nangate45/Nangate45_stdcell.lef"],
-        "def": f"{ORFS}/tools/OpenROAD/src/grt/test/overlapping_edges.def",
-        "pdk": "nangate45",
-    },
-    "gcd_rcx_nangate45": {
-        "lef": [f"{ORFS}/tools/OpenROAD/src/rcx/test/Nangate45/Nangate45_tech.lef",
-                f"{ORFS}/tools/OpenROAD/src/rcx/test/Nangate45/Nangate45_stdcell.lef"],
+    # uart_nangate45 removed: overlapping_edges.def uses sky130 "unithd" site
+    # (already covered by uart_sky130 with correct LEF)
+    "gcd_rcx_sky130hs": {
+        "lef": [f"{ORFS}/tools/OpenROAD/src/rcx/test/sky130hs/sky130hs.tlef",
+                f"{ORFS}/tools/OpenROAD/src/rcx/test/sky130hs/sky130hs_std_cell.lef"],
         "def": f"{ORFS}/tools/OpenROAD/src/rcx/test/gcd.def",
-        "pdk": "nangate45",
+        "pdk": "sky130hd",
     },
-    "gcd_grt_sky130": {
-        "lef": [f"{ORFS}/flow/platforms/sky130hd/lef/sky130_fd_sc_hd.tlef",
-                f"{ORFS}/flow/platforms/sky130hd/lef/sky130_fd_sc_hd_merged.lef"],
+    "gcd_grt_sky130hs": {
+        "lef": [f"{ORFS}/tools/OpenROAD/src/rcx/test/sky130hs/sky130hs.tlef",
+                f"{ORFS}/tools/OpenROAD/src/rcx/test/sky130hs/sky130hs_std_cell.lef"],
         "def": f"{ORFS}/tools/OpenROAD/src/grt/test/gcd_sky130.def",
         "pdk": "sky130hd",
     },
@@ -126,7 +125,8 @@ NEW_DESIGNS = {
         "lef": [f"{ORFS}/flow/platforms/asap7/lef/asap7_tech_1x_201209.lef",
                 f"{ORFS}/flow/platforms/asap7/lef/asap7sc7p5t_28_R_1x_220121a.lef",
                 f"{ORFS}/flow/platforms/asap7/lef/asap7sc7p5t_28_L_1x_220121a.lef",
-                f"{ORFS}/flow/platforms/asap7/lef/asap7sc7p5t_28_SL_1x_220121a.lef"],
+                f"{ORFS}/flow/platforms/asap7/lef/asap7sc7p5t_28_SL_1x_220121a.lef",
+                f"{ORFS}/flow/platforms/asap7/lef/fakeram7_256x32.lef"],
         "def": f"{ORFS}/tools/OpenROAD/src/psm/test/asap7_data/riscv.def",
         "pdk": "asap7",
     },
@@ -640,6 +640,9 @@ def main():
             s = r.get("eta_specificity")
             if s is not None:
                 nangate45_specs.append((r["design"], s))
+            elif r.get("certificate", "").startswith("TRIVIAL"):
+                # No overflow => no FP possible => specificity = 1.0
+                nangate45_specs.append((r["design"], 1.0))
             elif r.get("P_safe_given_eta0") == 1.0:
                 nangate45_specs.append((r["design"], 1.0))
 
@@ -649,6 +652,8 @@ def main():
             s = r.get("eta_specificity")
             if s is not None:
                 nangate45_specs.append((r["design"], s))
+            elif r.get("certificate", "").startswith("TRIVIAL"):
+                nangate45_specs.append((r["design"], 1.0))
             elif r.get("P_safe_given_eta0") == 1.0:
                 nangate45_specs.append((r["design"], 1.0))
 
