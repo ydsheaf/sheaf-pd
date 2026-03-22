@@ -1,0 +1,53 @@
+{
+  "new_results": [
+    {
+      "design": "aes_opt_nangate45",
+      "pdk": "nangate45",
+      "N": 18883,
+      "gs": 6,
+      "r_over_diag": 2.0,
+      "grt_total_overflow": 114869,
+      "accurate_gt_overflow": 114848.0,
+      "overflow_ratio": 0.9998171830519984,
+      "n_gcells_with_overflow": 20911,
+      "n_active": 25,
+      "n_overflow": 8,
+      "n_clean": 17,
+      "eta_specificity": 1.0,
+      "P_safe_given_eta0": 0.8095238095238095,
+      "eta_recall": 0.5,
+      "eta_f1": 0.6666666666666666,
+      "eta_accuracy": 0.84,
+      "confusion": {
+        "tn": 17,
+        "fp": 0,
+        "fn": 4,
+        "tp": 4
+      }
+    }
+  ],
+  "errors": {
+    "ibex_nangate45": "OpenROAD GR failed or timed out",
+    "jpeg_nangate45": "OpenROAD GR failed or timed out",
+    "swerv_nangate45": "OpenROAD GR failed or timed out",
+    "uart_nangate45": "OpenROAD GR failed or timed out",
+    "gcd_rcx_nangate45": "OpenROAD GR failed or timed out",
+    "riscv_asap7": "OpenROAD GR failed or timed out",
+    "gcd_grt_sky130": "OpenROAD GR failed or timed out"
+  },
+  "nangate45_binomial": {
+    "n_designs": 2,
+    "n_perfect_specificity": 2,
+    "designs": [
+      {
+        "name": "aes_nangate45",
+        "specificity": 1.0
+      },
+      {
+        "name": "aes_opt_nangate45",
+        "specificity": 1.0
+      }
+    ],
+    "p_value_vs_0.9": 0.81
+  }
+}
