@@ -428,6 +428,13 @@ def main():
         ("gcd_nangate45", 600),
         ("gcd_sky130", 600),
         ("aes_nangate45", 3600),
+        ("ibex_nangate45", 600),
+        ("aes_cipher_nangate45", 3600),
+        ("gcd_replace_nangate45", 600),
+        ("aes_asap7", 3600),
+        ("gcd_asap7", 600),
+        ("tempsensor_sky130", 600),
+        ("aes_psm_nangate45", 3600),
     ]
 
     all_results = []

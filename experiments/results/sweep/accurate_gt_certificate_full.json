@@ -1,0 +1,110 @@
+[
+  {
+    "design": "gcd_nangate45",
+    "pdk": "nangate45",
+    "N": 357,
+    "total_overflow": 37,
+    "n_active": 17,
+    "n_overflow": 0,
+    "n_clean": 17,
+    "certificate": "NO OVERFLOW",
+    "eta_max": 0.2962962962962963
+  },
+  {
+    "design": "gcd_sky130",
+    "pdk": "sky130hd",
+    "N": 370,
+    "total_overflow": 3990,
+    "n_active": 31,
+    "n_overflow": 28,
+    "n_clean": 3,
+    "P_safe_eta0": 0.11538461538461539,
+    "recall": 0.17857142857142858,
+    "f1": 0.30303030303030304,
+    "specificity": 1.0,
+    "confusion": {
+      "tn": 3,
+      "fp": 0,
+      "fn": 23,
+      "tp": 5
+    }
+  },
+  {
+    "design": "aes_nangate45",
+    "pdk": "nangate45",
+    "N": 16591,
+    "total_overflow": 146091,
+    "n_active": 15,
+    "n_overflow": 4,
+    "n_clean": 11,
+    "P_safe_eta0": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "specificity": 1.0,
+    "confusion": {
+      "tn": 11,
+      "fp": 0,
+      "fn": 0,
+      "tp": 4
+    }
+  },
+  {
+    "design": "gcd_replace_nangate45",
+    "pdk": "nangate45",
+    "N": 294,
+    "total_overflow": 489,
+    "n_active": 4,
+    "n_overflow": 1,
+    "n_clean": 3,
+    "P_safe_eta0": null,
+    "recall": 1.0,
+    "f1": 0.4,
+    "specificity": 0.0,
+    "confusion": {
+      "tn": 0,
+      "fp": 3,
+      "fn": 0,
+      "tp": 1
+    }
+  },
+  {
+    "design": "aes_asap7",
+    "pdk": "asap7",
+    "N": 21277,
+    "total_overflow": 105960,
+    "n_active": 36,
+    "n_overflow": 36,
+    "n_clean": 0,
+    "certificate": "ALL OVERFLOW"
+  },
+  {
+    "design": "gcd_asap7",
+    "pdk": "asap7",
+    "N": 366,
+    "total_overflow": 737,
+    "n_active": 4,
+    "n_overflow": 0,
+    "n_clean": 4,
+    "certificate": "NO OVERFLOW",
+    "eta_max": 0.6204889406286379
+  },
+  {
+    "design": "tempsensor_sky130",
+    "pdk": "sky130hd",
+    "N": 256,
+    "total_overflow": 340,
+    "n_active": 26,
+    "n_overflow": 15,
+    "n_clean": 11,
+    "P_safe_eta0": 0.3333333333333333,
+    "recall": 0.6,
+    "f1": 0.5625,
+    "specificity": 0.2727272727272727,
+    "confusion": {
+      "tn": 3,
+      "fp": 8,
+      "fn": 6,
+      "tp": 9
+    }
+  }
+]

@@ -777,24 +777,21 @@ DESIGNS = {
     "ibex_nangate45": {
         "def": f"{ORFS}/tools/OpenROAD/src/dpl/test/ibex_core_replace.def",
         "lef": [
-            f"{ORFS}/tools/OpenROAD/src/dpl/test/Nangate45_tech.lef",
-            f"{ORFS}/tools/OpenROAD/src/dpl/test/Nangate45_stdcell.lef",
+            f"{ORFS}/tools/OpenROAD/src/dpl/test/Nangate45/Nangate45.lef",
         ],
         "pdk": "nangate45",
     },
     "aes_cipher_nangate45": {
         "def": f"{ORFS}/tools/OpenROAD/src/dpl/test/aes_cipher_top_replace.def",
         "lef": [
-            f"{ORFS}/tools/OpenROAD/src/dpl/test/Nangate45_tech.lef",
-            f"{ORFS}/tools/OpenROAD/src/dpl/test/Nangate45_stdcell.lef",
+            f"{ORFS}/tools/OpenROAD/src/dpl/test/Nangate45/Nangate45.lef",
         ],
         "pdk": "nangate45",
     },
     "gcd_replace_nangate45": {
         "def": f"{ORFS}/tools/OpenROAD/src/dpl/test/gcd_replace.def",
         "lef": [
-            f"{ORFS}/tools/OpenROAD/src/dpl/test/Nangate45_tech.lef",
-            f"{ORFS}/tools/OpenROAD/src/dpl/test/Nangate45_stdcell.lef",
+            f"{ORFS}/tools/OpenROAD/src/dpl/test/Nangate45/Nangate45.lef",
         ],
         "pdk": "nangate45",
     },
@@ -834,6 +831,8 @@ DESIGNS = {
         "lef": [
             f"{ORFS}/flow/platforms/sky130hd/lef/sky130_fd_sc_hd.tlef",
             f"{ORFS}/flow/platforms/sky130hd/lef/sky130_fd_sc_hd_merged.lef",
+            f"{ORFS}/tools/OpenROAD/src/pdn/test/sky130_temp_sensor/HEADER.lef",
+            f"{ORFS}/tools/OpenROAD/src/pdn/test/sky130_temp_sensor/SLC.lef",
         ],
         "pdk": "sky130hd",
     },
