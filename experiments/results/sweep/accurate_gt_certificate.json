@@ -1,0 +1,72 @@
+[
+  {
+    "design": "gcd_nangate45",
+    "pdk": "nangate45",
+    "N": 357,
+    "gs": 6,
+    "r_over_diag": 2.0,
+    "grt_total_overflow": 37,
+    "accurate_gt_overflow": 25.0,
+    "overflow_ratio": 0.6756756756756757,
+    "n_gcells_with_overflow": 24,
+    "n_active": 17,
+    "n_overflow": 0,
+    "n_clean": 17,
+    "certificate": "TRIVIAL (no overflow)",
+    "eta_max": 0.2962962962962963
+  },
+  {
+    "design": "gcd_sky130",
+    "pdk": "sky130hd",
+    "N": 370,
+    "gs": 6,
+    "r_over_diag": 2.0,
+    "grt_total_overflow": 3990,
+    "accurate_gt_overflow": 3855.0,
+    "overflow_ratio": 0.9661654135338346,
+    "n_gcells_with_overflow": 1080,
+    "n_active": 31,
+    "n_overflow": 28,
+    "n_clean": 3,
+    "P_safe_given_eta0": 0.11538461538461539,
+    "eta_recall": 0.17857142857142858,
+    "eta_f1": 0.30303030303030304,
+    "eta_specificity": 1.0,
+    "eta_accuracy": 0.25806451612903225,
+    "confusion": {
+      "tn": 3,
+      "fp": 0,
+      "fn": 23,
+      "tp": 5
+    },
+    "dens_P_safe": 0.1875,
+    "dens_f1": 0.6976744186046512
+  },
+  {
+    "design": "aes_nangate45",
+    "pdk": "nangate45",
+    "N": 16591,
+    "gs": 6,
+    "r_over_diag": 2.0,
+    "grt_total_overflow": 146091,
+    "accurate_gt_overflow": 142730.0,
+    "overflow_ratio": 0.976993791540889,
+    "n_gcells_with_overflow": 30927,
+    "n_active": 15,
+    "n_overflow": 4,
+    "n_clean": 11,
+    "P_safe_given_eta0": 1.0,
+    "eta_recall": 1.0,
+    "eta_f1": 1.0,
+    "eta_specificity": 1.0,
+    "eta_accuracy": 1.0,
+    "confusion": {
+      "tn": 11,
+      "fp": 0,
+      "fn": 0,
+      "tp": 4
+    },
+    "dens_P_safe": 1.0,
+    "dens_f1": 0.7272727272727273
+  }
+]
