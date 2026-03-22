@@ -1,0 +1,19 @@
+{
+  "design": "aes_nangate45",
+  "gs": 6,
+  "n_active": 15,
+  "n_nets": 16493,
+  "n_net_edges": 133358,
+  "net_dbar": 16.07594478934362,
+  "n_prox_edges": 87087,
+  "prox_dbar": 10.498101380266409,
+  "cv_r2_density": 0.9871098549913626,
+  "cv_r2_eta_net_alone": 0.45863374784089084,
+  "cv_r2_eta_prox_alone": 0.36556510620019556,
+  "cv_r2_eta_net_density": 0.9944016474380682,
+  "cv_r2_eta_prox_density": 0.9941998088791651,
+  "cv_r2_all": 0.9938820613386392,
+  "net_improvement": 0.007291792446705636,
+  "prox_improvement": 0.007089953887802536,
+  "net_vs_prox": 0.0002018385589031002
+}

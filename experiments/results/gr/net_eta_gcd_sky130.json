@@ -1,0 +1,19 @@
+{
+  "design": "gcd_sky130",
+  "gs": 6,
+  "n_active": 31,
+  "n_nets": 352,
+  "n_net_edges": 1775,
+  "net_dbar": 9.594594594594595,
+  "n_prox_edges": 1626,
+  "prox_dbar": 8.78918918918919,
+  "cv_r2_density": 0.8682480023710164,
+  "cv_r2_eta_net_alone": -17.191508445710245,
+  "cv_r2_eta_prox_alone": 0.6030230705272699,
+  "cv_r2_eta_net_density": -1.0053224824274882,
+  "cv_r2_eta_prox_density": 0.8700307628307211,
+  "cv_r2_all": -1.2783588232983312,
+  "net_improvement": -1.8735704847985046,
+  "prox_improvement": 0.001782760459704713,
+  "net_vs_prox": -1.8753532452582093
+}
