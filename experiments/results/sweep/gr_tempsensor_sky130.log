@@ -1,0 +1,20 @@
+[INFO ODB-0227] LEF file: /mnt/storage1/users/ydwu/claude_projects/OpenROAD-flow-scripts/flow/platforms/sky130hd/lef/sky130_fd_sc_hd.tlef, created 13 layers, 25 vias
+[INFO ODB-0227] LEF file: /mnt/storage1/users/ydwu/claude_projects/OpenROAD-flow-scripts/flow/platforms/sky130hd/lef/sky130_fd_sc_hd_merged.lef, created 441 library cells
+[INFO ODB-0127] Reading DEF file: /mnt/storage1/users/ydwu/claude_projects/OpenROAD-flow-scripts/tools/OpenROAD/src/pdn/test/sky130_temp_sensor/4_cts.def
+[INFO ODB-0128] Design: tempsenseInst_error
+[WARNING ODB-0092] error: unknown library cell referenced (HEADER) for instance (temp_analog_1.a_header_0)
+[WARNING ODB-0092] error: unknown library cell referenced (HEADER) for instance (temp_analog_1.a_header_1)
+[WARNING ODB-0092] error: unknown library cell referenced (HEADER) for instance (temp_analog_1.a_header_2)
+[WARNING ODB-0092] error: unknown library cell referenced (SLC) for instance (temp_analog_1.a_lc_0)
+[WARNING ODB-0157] error: netlist component (temp_analog_1.a_lc_0) is not defined
+[WARNING ODB-0157] error: netlist component (temp_analog_1.a_header_2) is not defined
+[WARNING ODB-0157] error: netlist component (temp_analog_1.a_header_1) is not defined
+[WARNING ODB-0157] error: netlist component (temp_analog_1.a_header_0) is not defined
+[WARNING ODB-0099] error: netlist component (temp_analog_1.a_lc_0) is not defined
+[WARNING ODB-0099] error: netlist component (temp_analog_1.a_lc_0) is not defined
+[WARNING ODB-0099] error: netlist component (temp_analog_1.a_lc_0) is not defined
+[WARNING ODB-0099] error: netlist component (temp_analog_1.a_header_2) is not defined
+[WARNING ODB-0099] error: netlist component (temp_analog_1.a_header_1) is not defined
+[WARNING ODB-0099] error: netlist component (temp_analog_1.a_header_0) is not defined
+[ERROR ODB-0421] DEF parser returns an error!
+Error: _gr_tempsensor_sky130.tcl, 3 ODB-0421

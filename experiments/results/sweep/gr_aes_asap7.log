@@ -1,0 +1,111 @@
+[INFO ODB-0227] LEF file: /mnt/storage1/users/ydwu/claude_projects/OpenROAD-flow-scripts/flow/platforms/asap7/lef/asap7_tech_1x_201209.lef, created 30 layers, 9 vias
+[INFO ODB-0227] LEF file: /mnt/storage1/users/ydwu/claude_projects/OpenROAD-flow-scripts/flow/platforms/asap7/lef/asap7sc7p5t_28_R_1x_220121a.lef, created 212 library cells
+[INFO ODB-0394] Duplicate site asap7sc7p5t in asap7sc7p5t_28_L_1x_220121a already seen in asap7sc7p5t_28_R_1x_220121a
+[INFO ODB-0227] LEF file: /mnt/storage1/users/ydwu/claude_projects/OpenROAD-flow-scripts/flow/platforms/asap7/lef/asap7sc7p5t_28_L_1x_220121a.lef, created 212 library cells
+[INFO ODB-0394] Duplicate site asap7sc7p5t in asap7sc7p5t_28_SL_1x_220121a already seen in asap7sc7p5t_28_R_1x_220121a
+[INFO ODB-0227] LEF file: /mnt/storage1/users/ydwu/claude_projects/OpenROAD-flow-scripts/flow/platforms/asap7/lef/asap7sc7p5t_28_SL_1x_220121a.lef, created 212 library cells
+[INFO ODB-0127] Reading DEF file: /mnt/storage1/users/ydwu/claude_projects/OpenROAD-flow-scripts/tools/OpenROAD/src/psm/test/asap7_data/aes_place.def
+[INFO ODB-0128] Design: aes_cipher_top
+[INFO ODB-0130]     Created 388 pins.
+[INFO ODB-0131]     Created 22107 components and 115805 component-terminals.
+[INFO ODB-0132]     Created 2 special nets and 44214 connections.
+[INFO ODB-0133]     Created 21542 nets and 71591 connections.
+[INFO ODB-0134] Finished DEF file: /mnt/storage1/users/ydwu/claude_projects/OpenROAD-flow-scripts/tools/OpenROAD/src/psm/test/asap7_data/aes_place.def
+[WARNING GRT-0300] Timing is not available, setting critical nets percentage to 0.
+[INFO GRT-0020] Min routing layer: M2
+[INFO GRT-0021] Max routing layer: M3
+[INFO GRT-0022] Global adjustment: 0%
+[INFO GRT-0023] Grid origin: (0, 0)
+[INFO GRT-0088] Layer M1      Track-Pitch = 0.0360  line-2-Via Pitch: 0.0360
+[INFO GRT-0088] Layer M2      Track-Pitch = 0.0390  line-2-Via Pitch: 0.0360
+[INFO GRT-0088] Layer M3      Track-Pitch = 0.0360  line-2-Via Pitch: 0.0360
+[INFO GRT-0003] Macros: 0
+[INFO GRT-0004] Blockages: 1590
+[INFO GRT-0019] Found 0 clock nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 531
+
+[INFO GRT-0053] Routing resources analysis:
+          Routing      Original      Derated      Resource
+Layer     Direction    Resources     Resources    Reduction (%)
+---------------------------------------------------------------
+M1         Vertical            0             0          0.00%
+M2         Horizontal     229961         37227          83.81%
+M3         Vertical       309543         41226          86.68%
+---------------------------------------------------------------
+
+[INFO GRT-0101] Running extra iterations to remove overflow.
+[INFO GRT-0102] Start extra iteration 1/50
+[INFO GRT-0102] Start extra iteration 2/50
+[INFO GRT-0102] Start extra iteration 3/50
+[INFO GRT-0102] Start extra iteration 4/50
+[INFO GRT-0102] Start extra iteration 5/50
+[INFO GRT-0102] Start extra iteration 6/50
+[INFO GRT-0102] Start extra iteration 7/50
+[INFO GRT-0102] Start extra iteration 8/50
+[INFO GRT-0102] Start extra iteration 9/50
+[INFO GRT-0102] Start extra iteration 10/50
+[INFO GRT-0102] Start extra iteration 11/50
+[INFO GRT-0102] Start extra iteration 12/50
+[INFO GRT-0102] Start extra iteration 13/50
+[INFO GRT-0102] Start extra iteration 14/50
+[INFO GRT-0102] Start extra iteration 15/50
+[INFO GRT-0102] Start extra iteration 16/50
+[INFO GRT-0102] Start extra iteration 17/50
+[INFO GRT-0102] Start extra iteration 18/50
+[INFO GRT-0102] Start extra iteration 19/50
+[INFO GRT-0102] Start extra iteration 20/50
+[INFO GRT-0102] Start extra iteration 21/50
+[INFO GRT-0102] Start extra iteration 22/50
+[INFO GRT-0102] Start extra iteration 23/50
+[INFO GRT-0102] Start extra iteration 24/50
+[INFO GRT-0102] Start extra iteration 25/50
+[INFO GRT-0102] Start extra iteration 26/50
+[INFO GRT-0102] Start extra iteration 27/50
+[INFO GRT-0102] Start extra iteration 28/50
+[INFO GRT-0102] Start extra iteration 29/50
+[INFO GRT-0102] Start extra iteration 30/50
+[INFO GRT-0102] Start extra iteration 31/50
+[INFO GRT-0102] Start extra iteration 32/50
+[INFO GRT-0102] Start extra iteration 33/50
+[INFO GRT-0102] Start extra iteration 34/50
+[INFO GRT-0102] Start extra iteration 35/50
+[INFO GRT-0102] Start extra iteration 36/50
+[INFO GRT-0102] Start extra iteration 37/50
+[INFO GRT-0102] Start extra iteration 38/50
+[INFO GRT-0102] Start extra iteration 39/50
+[INFO GRT-0102] Start extra iteration 40/50
+[INFO GRT-0102] Start extra iteration 41/50
+[INFO GRT-0102] Start extra iteration 42/50
+[INFO GRT-0102] Start extra iteration 43/50
+[INFO GRT-0102] Start extra iteration 44/50
+[INFO GRT-0102] Start extra iteration 45/50
+[INFO GRT-0102] Start extra iteration 46/50
+[INFO GRT-0102] Start extra iteration 47/50
+[INFO GRT-0102] Start extra iteration 48/50
+[INFO GRT-0102] Start extra iteration 49/50
+[INFO GRT-0102] Start extra iteration 50/50
+[INFO GRT-0197] Via related to pin nodes: 130330
+[INFO GRT-0198] Via related Steiner nodes: 4959
+[INFO GRT-0199] Via filling finished.
+[INFO GRT-0111] Final number of vias: 182380
+[INFO GRT-0112] Final usage 3D: 728237
+
+[INFO GRT-0096] Final congestion report:
+Layer         Resource        Demand        Usage (%)    Max H / Max V / Total Overflow
+---------------------------------------------------------------------------------------
+M1                   0             0            0.00%             0 /  0 /  0
+M2               37227         88103          236.66%            12 /  2 / 52489
+M3               41226         92994          225.57%             2 / 11 / 53471
+---------------------------------------------------------------------------------------
+Total            78453        181097          230.84%            14 / 13 / 105960
+
+[INFO GRT-0018] Total wirelength: 140835 um
+[INFO GRT-0014] Routed nets: 21539
+[WARNING GRT-0115] Global routing finished with congestion. Check the congestion regions in the DRC Viewer.
+[INFO GRT-0303] Global routing runtime = 00:01:32
+GRID 144 144
+DBU 1000
+DIE 0 0 78835 78835
+XGRIDS 0 540 1080 1620 2160 2700 3240 3780 4320 4860 5400 5940 6480 7020 7560 8100 8640 9180 9720 10260 10800 11340 11880 12420 12960 13500 14040 14580 15120 15660 16200 16740 17280 17820 18360 18900 19440 19980 20520 21060 21600 22140 22680 23220 23760 24300 24840 25380 25920 26460 27000 27540 28080 28620 29160 29700 30240 30780 31320 31860 32400 32940 33480 34020 34560 35100 35640 36180 36720 37260 37800 38340 38880 39420 39960 40500 41040 41580 42120 42660 43200 43740 44280 44820 45360 45900 46440 46980 47520 48060 48600 49140 49680 50220 50760 51300 51840 52380 52920 53460 54000 54540 55080 55620 56160 56700 57240 57780 58320 58860 59400 59940 60480 61020 61560 62100 62640 63180 63720 64260 64800 65340 65880 66420 66960 67500 68040 68580 69120 69660 70200 70740 71280 71820 72360 72900 73440 73980 74520 75060 75600 76140 76680 77220 77760
+YGRIDS 0 540 1080 1620 2160 2700 3240 3780 4320 4860 5400 5940 6480 7020 7560 8100 8640 9180 9720 10260 10800 11340 11880 12420 12960 13500 14040 14580 15120 15660 16200 16740 17280 17820 18360 18900 19440 19980 20520 21060 21600 22140 22680 23220 23760 24300 24840 25380 25920 26460 27000 27540 28080 28620 29160 29700 30240 30780 31320 31860 32400 32940 33480 34020 34560 35100 35640 36180 36720 37260 37800 38340 38880 39420 39960 40500 41040 41580 42120 42660 43200 43740 44280 44820 45360 45900 46440 46980 47520 48060 48600 49140 49680 50220 50760 51300 51840 52380 52920 53460 54000 54540 55080 55620 56160 56700 57240 57780 58320 58860 59400 59940 60480 61020 61560 62100 62640 63180 63720 64260 64800 65340 65880 66420 66960 67500 68040 68580 69120 69660 70200 70740 71280 71820 72360 72900 73440 73980 74520 75060 75600 76140 76680 77220 77760
