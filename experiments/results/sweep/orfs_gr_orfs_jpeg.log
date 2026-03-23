@@ -1,0 +1,88 @@
+OpenROAD 26Q1-1480-gb984a8d7e8 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ODB-0227] LEF file: /mnt/storage1/users/ydwu/claude_projects/OpenROAD-flow-scripts/flow/platforms/nangate45/lef/NangateOpenCellLibrary.tech.lef, created 22 layers, 27 vias
+[INFO ODB-0227] LEF file: /mnt/storage1/users/ydwu/claude_projects/OpenROAD-flow-scripts/flow/platforms/nangate45/lef/NangateOpenCellLibrary.macro.mod.lef, created 135 library cells
+[INFO ODB-0127] Reading DEF file: /mnt/storage1/users/ydwu/claude_projects/OpenROAD-flow-scripts/flow/custom_results/jpeg/jpeg_placed.def
+[INFO ODB-0128] Design: jpeg_encoder
+[INFO ODB-0130]     Created 47 pins.
+[INFO ODB-0131]     Created 74682 components and 409436 component-terminals.
+[INFO ODB-0133]     Created 79525 nets and 260072 connections.
+[INFO ODB-0134] Finished DEF file: /mnt/storage1/users/ydwu/claude_projects/OpenROAD-flow-scripts/flow/custom_results/jpeg/jpeg_placed.def
+[INFO GRT-0020] Min routing layer: metal2
+[INFO GRT-0021] Max routing layer: metal10
+[INFO GRT-0022] Global adjustment: 0%
+[INFO GRT-0023] Grid origin: (0, 0)
+[INFO GRT-0088] Layer metal1  Track-Pitch = 0.1400  line-2-Via Pitch: 0.1350
+[INFO GRT-0088] Layer metal2  Track-Pitch = 0.1900  line-2-Via Pitch: 0.1400
+[INFO GRT-0088] Layer metal3  Track-Pitch = 0.1400  line-2-Via Pitch: 0.1400
+[INFO GRT-0088] Layer metal4  Track-Pitch = 0.2800  line-2-Via Pitch: 0.2800
+[INFO GRT-0088] Layer metal5  Track-Pitch = 0.2800  line-2-Via Pitch: 0.2800
+[INFO GRT-0088] Layer metal6  Track-Pitch = 0.2800  line-2-Via Pitch: 0.2800
+[INFO GRT-0088] Layer metal7  Track-Pitch = 0.8000  line-2-Via Pitch: 0.8000
+[INFO GRT-0088] Layer metal8  Track-Pitch = 0.8000  line-2-Via Pitch: 0.8000
+[INFO GRT-0088] Layer metal9  Track-Pitch = 1.6000  line-2-Via Pitch: 1.6000
+[INFO GRT-0088] Layer metal10 Track-Pitch = 1.6000  line-2-Via Pitch: 1.6000
+[INFO GRT-0003] Macros: 0
+[INFO GRT-0004] Blockages: 0
+[INFO GRT-0019] Found 0 clock nets.
+[WARNING GRT-0281] Net clk has a large fanout of 4709 terminals.
+[WARNING GRT-0281] Net ena has a large fanout of 5101 terminals.
+[WARNING GRT-0281] Net fdct_zigzag/dct_mod/ddgo has a large fanout of 1090 terminals.
+[WARNING GRT-0281] Net fdct_zigzag/dct_mod/ddin[1] has a large fanout of 1858 terminals.
+[WARNING GRT-0281] Net fdct_zigzag/dct_mod/ddin[2] has a large fanout of 1794 terminals.
+[WARNING GRT-0281] Net fdct_zigzag/dct_mod/ddin[4] has a large fanout of 1474 terminals.
+[WARNING GRT-0281] Net fdct_zigzag/dct_mod/ddin[5] has a large fanout of 1346 terminals.
+[WARNING GRT-0281] Net fdct_zigzag/dct_mod/ddin[8] has a large fanout of 1666 terminals.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 5101
+
+[INFO GRT-0053] Routing resources analysis:
+          Routing      Original      Derated      Resource
+Layer     Direction    Resources     Resources    Reduction (%)
+---------------------------------------------------------------
+metal1     Horizontal          0             0          0.00%
+metal2     Vertical       771112        360018          53.31%
+metal3     Horizontal    1046380        513924          50.89%
+metal4     Vertical       523190        256962          50.89%
+metal5     Horizontal     523190        256962          50.89%
+metal6     Vertical       523190        256962          50.89%
+metal7     Horizontal     182834         80230          56.12%
+metal8     Vertical       182834         80230          56.12%
+metal9     Horizontal      91304         51302          43.81%
+metal10    Vertical        91304         51302          43.81%
+---------------------------------------------------------------
+
+[INFO GRT-0197] Via related to pin nodes: 393428
+[INFO GRT-0198] Via related Steiner nodes: 4821
+[INFO GRT-0199] Via filling finished.
+[INFO GRT-0111] Final number of vias: 472956
+[INFO GRT-0112] Final usage 3D: 1675284
+
+[INFO GRT-0096] Final congestion report:
+Layer         Resource        Demand        Usage (%)    Max H / Max V / Total Overflow
+---------------------------------------------------------------------------------------
+metal1               0             0            0.00%             0 /  0 /  0
+metal2          360018        125874           34.96%             0 /  0 /  0
+metal3          513924        124824           24.29%             0 /  0 /  0
+metal4          256962          5219            2.03%             0 /  0 /  0
+metal5          256962           403            0.16%             0 /  0 /  0
+metal6          256962            96            0.04%             0 /  0 /  0
+metal7           80230             0            0.00%             0 /  0 /  0
+metal8           80230             0            0.00%             0 /  0 /  0
+metal9           51302             0            0.00%             0 /  0 /  0
+metal10          51302             0            0.00%             0 /  0 /  0
+---------------------------------------------------------------------------------------
+Total          1907892        256416           13.44%             0 /  0 /  0
+
+[INFO GRT-0018] Total wirelength: 1174023 um
+[INFO GRT-0014] Routed nets: 74919
+[INFO GRT-0303] Global routing runtime = 00:00:04
+GRID 226 226
+DBU 2000
+DIE 0 0 1296450 1296450
+XGRIDS 0 5700 11400 17100 22800 28500 34200 39900 45600 51300 57000 62700 68400 74100 79800 85500 91200 96900 102600 108300 114000 119700 125400 131100 136800 142500 148200 153900 159600 165300 171000 176700 182400 188100 193800 199500 205200 210900 216600 222300 228000 233700 239400 245100 250800 256500 262200 267900 273600 279300 285000 290700 296400 302100 307800 313500 319200 324900 330600 336300 342000 347700 353400 359100 364800 370500 376200 381900 387600 393300 399000 404700 410400 416100 421800 427500 433200 438900 444600 450300 456000 461700 467400 473100 478800 484500 490200 495900 501600 507300 513000 518700 524400 530100 535800 541500 547200 552900 558600 564300 570000 575700 581400 587100 592800 598500 604200 609900 615600 621300 627000 632700 638400 644100 649800 655500 661200 666900 672600 678300 684000 689700 695400 701100 706800 712500 718200 723900 729600 735300 741000 746700 752400 758100 763800 769500 775200 780900 786600 792300 798000 803700 809400 815100 820800 826500 832200 837900 843600 849300 855000 860700 866400 872100 877800 883500 889200 894900 900600 906300 912000 917700 923400 929100 934800 940500 946200 951900 957600 963300 969000 974700 980400 986100 991800 997500 1003200 1008900 1014600 1020300 1026000 1031700 1037400 1043100 1048800 1054500 1060200 1065900 1071600 1077300 1083000 1088700 1094400 1100100 1105800 1111500 1117200 1122900 1128600 1134300 1140000 1145700 1151400 1157100 1162800 1168500 1174200 1179900 1185600 1191300 1197000 1202700 1208400 1214100 1219800 1225500 1231200 1236900 1242600 1248300 1254000 1259700 1265400 1271100 1276800 1282500 1288200
+YGRIDS 0 5700 11400 17100 22800 28500 34200 39900 45600 51300 57000 62700 68400 74100 79800 85500 91200 96900 102600 108300 114000 119700 125400 131100 136800 142500 148200 153900 159600 165300 171000 176700 182400 188100 193800 199500 205200 210900 216600 222300 228000 233700 239400 245100 250800 256500 262200 267900 273600 279300 285000 290700 296400 302100 307800 313500 319200 324900 330600 336300 342000 347700 353400 359100 364800 370500 376200 381900 387600 393300 399000 404700 410400 416100 421800 427500 433200 438900 444600 450300 456000 461700 467400 473100 478800 484500 490200 495900 501600 507300 513000 518700 524400 530100 535800 541500 547200 552900 558600 564300 570000 575700 581400 587100 592800 598500 604200 609900 615600 621300 627000 632700 638400 644100 649800 655500 661200 666900 672600 678300 684000 689700 695400 701100 706800 712500 718200 723900 729600 735300 741000 746700 752400 758100 763800 769500 775200 780900 786600 792300 798000 803700 809400 815100 820800 826500 832200 837900 843600 849300 855000 860700 866400 872100 877800 883500 889200 894900 900600 906300 912000 917700 923400 929100 934800 940500 946200 951900 957600 963300 969000 974700 980400 986100 991800 997500 1003200 1008900 1014600 1020300 1026000 1031700 1037400 1043100 1048800 1054500 1060200 1065900 1071600 1077300 1083000 1088700 1094400 1100100 1105800 1111500 1117200 1122900 1128600 1134300 1140000 1145700 1151400 1157100 1162800 1168500 1174200 1179900 1185600 1191300 1197000 1202700 1208400 1214100 1219800 1225500 1231200 1236900 1242600 1248300 1254000 1259700 1265400 1271100 1276800 1282500 1288200
+Error: _orfs_gr_orfs_jpeg.tcl, 43 invalid command name "grt::get_congestion"
+openroad> 

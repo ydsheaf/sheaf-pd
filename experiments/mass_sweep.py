@@ -455,13 +455,13 @@ def validate_certificate(design_name, cfg, gs=6):
         gt_data, die_area, gs, dbu)
     has_overflow = (overflow_grid > 0).astype(int)
 
-    # Subsample if needed
-    if N > 1500:
-        print(f"  Subsampling {N} -> 1500 cells for eta computation")
-        cx, cy = np.mean(positions, axis=0)
-        dists = np.sqrt((positions[:, 0] - cx)**2 + (positions[:, 1] - cy)**2)
-        idx = np.argsort(dists)[:1500]
-        pos_sub, w_sub, h_sub = positions[idx], widths[idx], heights[idx]
+    # Subsample if needed — increased limit from 1500 to 5000, with stratified
+    # subsampling for designs larger than 5000 cells (Issue #26)
+    if N > 5000:
+        from certificate_no_subsample import stratified_subsample
+        print(f"  Stratified subsampling {N} -> 5000 cells for eta computation")
+        pos_sub, w_sub, h_sub = stratified_subsample(
+            positions, widths, heights, die_area, gs, 5000)
     else:
         pos_sub, w_sub, h_sub = positions, widths, heights
 

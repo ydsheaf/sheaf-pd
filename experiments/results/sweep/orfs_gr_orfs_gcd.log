@@ -1,0 +1,80 @@
+OpenROAD 26Q1-1480-gb984a8d7e8 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ODB-0227] LEF file: /mnt/storage1/users/ydwu/claude_projects/OpenROAD-flow-scripts/flow/platforms/nangate45/lef/NangateOpenCellLibrary.tech.lef, created 22 layers, 27 vias
+[INFO ODB-0227] LEF file: /mnt/storage1/users/ydwu/claude_projects/OpenROAD-flow-scripts/flow/platforms/nangate45/lef/NangateOpenCellLibrary.macro.mod.lef, created 135 library cells
+[INFO ODB-0127] Reading DEF file: /mnt/storage1/users/ydwu/claude_projects/OpenROAD-flow-scripts/flow/custom_results/gcd/gcd_placed.def
+[INFO ODB-0128] Design: gcd
+[INFO ODB-0130]     Created 54 pins.
+[INFO ODB-0131]     Created 326 components and 1771 component-terminals.
+[INFO ODB-0133]     Created 396 nets and 1119 connections.
+[INFO ODB-0134] Finished DEF file: /mnt/storage1/users/ydwu/claude_projects/OpenROAD-flow-scripts/flow/custom_results/gcd/gcd_placed.def
+[INFO GRT-0020] Min routing layer: metal2
+[INFO GRT-0021] Max routing layer: metal10
+[INFO GRT-0022] Global adjustment: 0%
+[INFO GRT-0023] Grid origin: (0, 0)
+[INFO GRT-0088] Layer metal1  Track-Pitch = 0.1400  line-2-Via Pitch: 0.1350
+[INFO GRT-0088] Layer metal2  Track-Pitch = 0.1900  line-2-Via Pitch: 0.1400
+[INFO GRT-0088] Layer metal3  Track-Pitch = 0.1400  line-2-Via Pitch: 0.1400
+[INFO GRT-0088] Layer metal4  Track-Pitch = 0.2800  line-2-Via Pitch: 0.2800
+[INFO GRT-0088] Layer metal5  Track-Pitch = 0.2800  line-2-Via Pitch: 0.2800
+[INFO GRT-0088] Layer metal6  Track-Pitch = 0.2800  line-2-Via Pitch: 0.2800
+[INFO GRT-0088] Layer metal7  Track-Pitch = 0.8000  line-2-Via Pitch: 0.8000
+[INFO GRT-0088] Layer metal8  Track-Pitch = 0.8000  line-2-Via Pitch: 0.8000
+[INFO GRT-0088] Layer metal9  Track-Pitch = 1.6000  line-2-Via Pitch: 1.6000
+[INFO GRT-0088] Layer metal10 Track-Pitch = 1.6000  line-2-Via Pitch: 1.6000
+[INFO GRT-0003] Macros: 0
+[INFO GRT-0004] Blockages: 0
+[INFO GRT-0019] Found 0 clock nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 35
+
+[INFO GRT-0053] Routing resources analysis:
+          Routing      Original      Derated      Resource
+Layer     Direction    Resources     Resources    Reduction (%)
+---------------------------------------------------------------
+metal1     Horizontal          0             0          0.00%
+metal2     Vertical         3262          1526          53.22%
+metal3     Horizontal       4424          2170          50.95%
+metal4     Vertical         2212          1078          51.27%
+metal5     Horizontal       2212          1078          51.27%
+metal6     Vertical         2212          1078          51.27%
+metal7     Horizontal        770           336          56.36%
+metal8     Vertical          770           336          56.36%
+metal9     Horizontal        378           210          44.44%
+metal10    Vertical          378           210          44.44%
+---------------------------------------------------------------
+
+[INFO GRT-0197] Via related to pin nodes: 1666
+[INFO GRT-0198] Via related Steiner nodes: 29
+[INFO GRT-0199] Via filling finished.
+[INFO GRT-0111] Final number of vias: 2061
+[INFO GRT-0112] Final usage 3D: 7526
+
+[INFO GRT-0096] Final congestion report:
+Layer         Resource        Demand        Usage (%)    Max H / Max V / Total Overflow
+---------------------------------------------------------------------------------------
+metal1               0             0            0.00%             0 /  0 /  0
+metal2            1526           575           37.68%             0 /  0 /  0
+metal3            2170           739           34.06%             0 /  0 /  0
+metal4            1078            16            1.48%             0 /  0 /  0
+metal5            1078            13            1.21%             0 /  0 /  0
+metal6            1078             0            0.00%             0 /  0 /  0
+metal7             336             0            0.00%             0 /  0 /  0
+metal8             336             0            0.00%             0 /  0 /  0
+metal9             210             0            0.00%             0 /  0 /  0
+metal10            210             0            0.00%             0 /  0 /  0
+---------------------------------------------------------------------------------------
+Total             8022          1343           16.74%             0 /  0 /  0
+
+[INFO GRT-0018] Total wirelength: 5979 um
+[INFO GRT-0014] Routed nets: 362
+[INFO GRT-0303] Global routing runtime = 00:00:00
+GRID 14 14
+DBU 2000
+DIE 0 0 88670 88670
+XGRIDS 0 5700 11400 17100 22800 28500 34200 39900 45600 51300 57000 62700 68400 74100 79800
+YGRIDS 0 5700 11400 17100 22800 28500 34200 39900 45600 51300 57000 62700 68400 74100 79800
+Error: _orfs_gr_orfs_gcd.tcl, 43 invalid command name "grt::get_congestion"
+openroad> 

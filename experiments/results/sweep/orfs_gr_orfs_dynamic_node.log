@@ -1,0 +1,83 @@
+OpenROAD 26Q1-1480-gb984a8d7e8 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ODB-0227] LEF file: /mnt/storage1/users/ydwu/claude_projects/OpenROAD-flow-scripts/flow/platforms/nangate45/lef/NangateOpenCellLibrary.tech.lef, created 22 layers, 27 vias
+[INFO ODB-0227] LEF file: /mnt/storage1/users/ydwu/claude_projects/OpenROAD-flow-scripts/flow/platforms/nangate45/lef/NangateOpenCellLibrary.macro.mod.lef, created 135 library cells
+[INFO ODB-0127] Reading DEF file: /mnt/storage1/users/ydwu/claude_projects/OpenROAD-flow-scripts/flow/custom_results/dynamic_node/dynamic_node_placed.def
+[INFO ODB-0128] Design: dynamic_node_top_wrap
+[INFO ODB-0130]     Created 693 pins.
+[INFO ODB-0131]     Created 13214 components and 75015 component-terminals.
+[INFO ODB-0133]     Created 15874 nets and 48587 connections.
+[INFO ODB-0134] Finished DEF file: /mnt/storage1/users/ydwu/claude_projects/OpenROAD-flow-scripts/flow/custom_results/dynamic_node/dynamic_node_placed.def
+[INFO GRT-0020] Min routing layer: metal2
+[INFO GRT-0021] Max routing layer: metal10
+[INFO GRT-0022] Global adjustment: 0%
+[INFO GRT-0023] Grid origin: (0, 0)
+[INFO GRT-0088] Layer metal1  Track-Pitch = 0.1400  line-2-Via Pitch: 0.1350
+[INFO GRT-0088] Layer metal2  Track-Pitch = 0.1900  line-2-Via Pitch: 0.1400
+[INFO GRT-0088] Layer metal3  Track-Pitch = 0.1400  line-2-Via Pitch: 0.1400
+[INFO GRT-0088] Layer metal4  Track-Pitch = 0.2800  line-2-Via Pitch: 0.2800
+[INFO GRT-0088] Layer metal5  Track-Pitch = 0.2800  line-2-Via Pitch: 0.2800
+[INFO GRT-0088] Layer metal6  Track-Pitch = 0.2800  line-2-Via Pitch: 0.2800
+[INFO GRT-0088] Layer metal7  Track-Pitch = 0.8000  line-2-Via Pitch: 0.8000
+[INFO GRT-0088] Layer metal8  Track-Pitch = 0.8000  line-2-Via Pitch: 0.8000
+[INFO GRT-0088] Layer metal9  Track-Pitch = 1.6000  line-2-Via Pitch: 1.6000
+[INFO GRT-0088] Layer metal10 Track-Pitch = 1.6000  line-2-Via Pitch: 1.6000
+[INFO GRT-0003] Macros: 0
+[INFO GRT-0004] Blockages: 0
+[INFO GRT-0019] Found 0 clock nets.
+[WARNING GRT-0281] Net clk has a large fanout of 2299 terminals.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2299
+
+[INFO GRT-0053] Routing resources analysis:
+          Routing      Original      Derated      Resource
+Layer     Direction    Resources     Resources    Reduction (%)
+---------------------------------------------------------------
+metal1     Horizontal          0             0          0.00%
+metal2     Vertical       173875         81213          53.29%
+metal3     Horizontal     236042        115988          50.86%
+metal4     Vertical       118021         57994          50.86%
+metal5     Horizontal     118021         57994          50.86%
+metal6     Vertical       118021         57994          50.86%
+metal7     Horizontal      41195         18083          56.10%
+metal8     Vertical        41195         18083          56.10%
+metal9     Horizontal      20544         11556          43.75%
+metal10    Vertical        20544         11556          43.75%
+---------------------------------------------------------------
+
+[INFO GRT-0101] Running extra iterations to remove overflow.
+[INFO GRT-0102] Start extra iteration 1/5
+[INFO GRT-0197] Via related to pin nodes: 77688
+[INFO GRT-0198] Via related Steiner nodes: 2168
+[INFO GRT-0199] Via filling finished.
+[INFO GRT-0111] Final number of vias: 99291
+[INFO GRT-0112] Final usage 3D: 402483
+
+[INFO GRT-0096] Final congestion report:
+Layer         Resource        Demand        Usage (%)    Max H / Max V / Total Overflow
+---------------------------------------------------------------------------------------
+metal1               0             0            0.00%             0 /  0 /  0
+metal2           81213         37454           46.12%             0 /  0 /  0
+metal3          115988         45953           39.62%             0 /  0 /  0
+metal4           57994         13398           23.10%             0 /  0 /  0
+metal5           57994          4209            7.26%             0 /  0 /  0
+metal6           57994          3397            5.86%             0 /  0 /  0
+metal7           18083           132            0.73%             0 /  0 /  0
+metal8           18083            26            0.14%             0 /  0 /  0
+metal9           11556            41            0.35%             0 /  0 /  0
+metal10          11556             0            0.00%             0 /  0 /  0
+---------------------------------------------------------------------------------------
+Total           430461        104610           24.30%             0 /  0 /  0
+
+[INFO GRT-0018] Total wirelength: 403736 um
+[INFO GRT-0014] Routed nets: 13667
+[INFO GRT-0303] Global routing runtime = 00:00:02
+GRID 107 107
+DBU 2000
+DIE 0 0 617660 617660
+XGRIDS 0 5700 11400 17100 22800 28500 34200 39900 45600 51300 57000 62700 68400 74100 79800 85500 91200 96900 102600 108300 114000 119700 125400 131100 136800 142500 148200 153900 159600 165300 171000 176700 182400 188100 193800 199500 205200 210900 216600 222300 228000 233700 239400 245100 250800 256500 262200 267900 273600 279300 285000 290700 296400 302100 307800 313500 319200 324900 330600 336300 342000 347700 353400 359100 364800 370500 376200 381900 387600 393300 399000 404700 410400 416100 421800 427500 433200 438900 444600 450300 456000 461700 467400 473100 478800 484500 490200 495900 501600 507300 513000 518700 524400 530100 535800 541500 547200 552900 558600 564300 570000 575700 581400 587100 592800 598500 604200 609900
+YGRIDS 0 5700 11400 17100 22800 28500 34200 39900 45600 51300 57000 62700 68400 74100 79800 85500 91200 96900 102600 108300 114000 119700 125400 131100 136800 142500 148200 153900 159600 165300 171000 176700 182400 188100 193800 199500 205200 210900 216600 222300 228000 233700 239400 245100 250800 256500 262200 267900 273600 279300 285000 290700 296400 302100 307800 313500 319200 324900 330600 336300 342000 347700 353400 359100 364800 370500 376200 381900 387600 393300 399000 404700 410400 416100 421800 427500 433200 438900 444600 450300 456000 461700 467400 473100 478800 484500 490200 495900 501600 507300 513000 518700 524400 530100 535800 541500 547200 552900 558600 564300 570000 575700 581400 587100 592800 598500 604200 609900
+Error: _orfs_gr_orfs_dynamic_node.tcl, 43 invalid command name "grt::get_congestion"
+openroad> 
