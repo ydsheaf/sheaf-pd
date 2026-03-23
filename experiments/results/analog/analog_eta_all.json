@@ -1,0 +1,250 @@
+[
+  {
+    "eta": 0.0,
+    "eta_theory": 0.0,
+    "rank": 5,
+    "nE": 5,
+    "N": 16,
+    "dim_C0": 32,
+    "dim_C1": 5,
+    "dim_H1": 0,
+    "dbar": 0.625,
+    "avg_ne": 1.0,
+    "type_counts": {
+      "group": 5
+    },
+    "design": "niwc_opamp"
+  },
+  {
+    "eta": 0.15,
+    "eta_theory": 0.0,
+    "rank": 17,
+    "nE": 17,
+    "N": 20,
+    "dim_C0": 40,
+    "dim_C1": 20,
+    "dim_H1": 3,
+    "dbar": 1.7,
+    "avg_ne": 1.1764705882352942,
+    "type_counts": {
+      "group": 5,
+      "symmetry": 3,
+      "order": 3,
+      "align": 6
+    },
+    "design": "high_speed_comparator"
+  },
+  {
+    "eta": 0.0,
+    "eta_theory": 0.0,
+    "rank": 1,
+    "nE": 1,
+    "N": 2,
+    "dim_C0": 4,
+    "dim_C1": 1,
+    "dim_H1": 0,
+    "dbar": 1.0,
+    "avg_ne": 1.0,
+    "type_counts": {
+      "order": 1
+    },
+    "design": "ring_oscillator"
+  },
+  {
+    "eta": 0.3157894736842105,
+    "eta_theory": 0.0,
+    "rank": 13,
+    "nE": 19,
+    "N": 24,
+    "dim_C0": 48,
+    "dim_C1": 19,
+    "dim_H1": 6,
+    "dbar": 1.5833333333333333,
+    "avg_ne": 1.0,
+    "type_counts": {
+      "group": 12,
+      "order": 7
+    },
+    "design": "vco_dtype_12_hierarchical_res_constrained"
+  },
+  {
+    "eta": 0.0,
+    "eta_theory": 0.0,
+    "rank": 3,
+    "nE": 3,
+    "N": 5,
+    "dim_C0": 10,
+    "dim_C1": 3,
+    "dim_H1": 0,
+    "dbar": 1.2,
+    "avg_ne": 1.0,
+    "type_counts": {
+      "group": 1,
+      "order": 2
+    },
+    "design": "vga_stage"
+  },
+  {
+    "eta": 0.15,
+    "eta_theory": 0.0,
+    "rank": 17,
+    "nE": 17,
+    "N": 20,
+    "dim_C0": 40,
+    "dim_C1": 20,
+    "dim_H1": 3,
+    "dbar": 1.7,
+    "avg_ne": 1.1764705882352942,
+    "type_counts": {
+      "group": 5,
+      "symmetry": 3,
+      "order": 3,
+      "align": 6
+    },
+    "design": "high_speed_comparator_align"
+  },
+  {
+    "eta": 0.1111111111111111,
+    "eta_theory": 0.0,
+    "rank": 8,
+    "nE": 9,
+    "N": 20,
+    "dim_C0": 40,
+    "dim_C1": 9,
+    "dim_H1": 1,
+    "dbar": 0.9,
+    "avg_ne": 1.0,
+    "type_counts": {
+      "group": 5,
+      "order": 4
+    },
+    "design": "high_speed_comparator_broken"
+  },
+  {
+    "eta": 0.0,
+    "eta_theory": 0.0,
+    "rank": 11,
+    "nE": 8,
+    "N": 20,
+    "dim_C0": 40,
+    "dim_C1": 11,
+    "dim_H1": 0,
+    "dbar": 0.8,
+    "avg_ne": 1.375,
+    "type_counts": {
+      "group": 5,
+      "symmetry": 3
+    },
+    "design": "high_speed_comparator_compactplacement"
+  },
+  {
+    "eta": 0.15,
+    "eta_theory": 0.0,
+    "rank": 17,
+    "nE": 17,
+    "N": 20,
+    "dim_C0": 40,
+    "dim_C1": 20,
+    "dim_H1": 3,
+    "dbar": 1.7,
+    "avg_ne": 1.1764705882352942,
+    "type_counts": {
+      "group": 5,
+      "symmetry": 3,
+      "order": 3,
+      "align": 6
+    },
+    "design": "high_speed_comparator_multiconnection"
+  },
+  {
+    "eta": 0.0,
+    "eta_theory": 0.0,
+    "rank": 10,
+    "nE": 10,
+    "N": 20,
+    "dim_C0": 40,
+    "dim_C1": 10,
+    "dim_H1": 0,
+    "dbar": 1.0,
+    "avg_ne": 1.0,
+    "type_counts": {
+      "group": 5,
+      "order": 5
+    },
+    "design": "high_speed_comparator_orderblock"
+  },
+  {
+    "eta": 0.15,
+    "eta_theory": 0.0,
+    "rank": 17,
+    "nE": 17,
+    "N": 20,
+    "dim_C0": 40,
+    "dim_C1": 20,
+    "dim_H1": 3,
+    "dbar": 1.7,
+    "avg_ne": 1.1764705882352942,
+    "type_counts": {
+      "group": 5,
+      "symmetry": 3,
+      "order": 3,
+      "align": 6
+    },
+    "design": "high_speed_comparator_portlocation"
+  },
+  {
+    "eta": 0.0,
+    "eta_theory": 0.0,
+    "rank": 11,
+    "nE": 8,
+    "N": 20,
+    "dim_C0": 40,
+    "dim_C1": 11,
+    "dim_H1": 0,
+    "dbar": 0.8,
+    "avg_ne": 1.375,
+    "type_counts": {
+      "group": 5,
+      "symmetry": 3
+    },
+    "design": "high_speed_comparator_symmblock"
+  },
+  {
+    "eta": 0.15,
+    "eta_theory": 0.0,
+    "rank": 17,
+    "nE": 17,
+    "N": 20,
+    "dim_C0": 40,
+    "dim_C1": 20,
+    "dim_H1": 3,
+    "dbar": 1.7,
+    "avg_ne": 1.1764705882352942,
+    "type_counts": {
+      "group": 5,
+      "symmetry": 3,
+      "order": 3,
+      "align": 6
+    },
+    "design": "high_speed_comparator_symmnet"
+  },
+  {
+    "eta": 0.17647058823529413,
+    "eta_theory": 0.0,
+    "rank": 14,
+    "nE": 14,
+    "N": 16,
+    "dim_C0": 32,
+    "dim_C1": 17,
+    "dim_H1": 3,
+    "dbar": 1.75,
+    "avg_ne": 1.2142857142857142,
+    "type_counts": {
+      "group": 2,
+      "symmetry": 3,
+      "order": 3,
+      "align": 6
+    },
+    "design": "hsc_black_box_test"
+  }
+]
