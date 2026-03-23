@@ -1,0 +1,72 @@
+[INFO ODB-0227] LEF file: /mnt/storage1/users/ydwu/claude_projects/OpenROAD-flow-scripts/tools/OpenROAD/src/gpl/test/Nangate45/Nangate45_tech.lef, created 22 layers, 27 vias
+[INFO ODB-0227] LEF file: /mnt/storage1/users/ydwu/claude_projects/OpenROAD-flow-scripts/tools/OpenROAD/src/gpl/test/Nangate45/Nangate45_stdcell.lef, created 135 library cells
+[INFO ODB-0127] Reading DEF file: /mnt/storage1/users/ydwu/claude_projects/OpenROAD-flow-scripts/tools/OpenROAD/src/dpl/test/max_disp1.def
+[INFO ODB-0128] Design: test_RAM
+[WARNING ODB-0092] error: unknown library cell referenced (fakeram45_1024x32) for instance (DUT)
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[WARNING ODB-0099] error: netlist component (DUT) is not defined
+[ERROR ODB-0421] DEF parser returns an error!
+Error: _heldout_max_disp_nangate45.tcl, 3 ODB-0421

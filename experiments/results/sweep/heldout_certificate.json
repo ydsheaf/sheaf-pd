@@ -1,0 +1,667 @@
+{
+  "description": "Held-out scoped certificate validation on 10 new NanGate45 designs",
+  "issue": 26,
+  "designs_attempted": [
+    "rocket_nangate45",
+    "ibex_opt_nangate45",
+    "aes_dpl_nangate45",
+    "gcd_odb_nangate45",
+    "gcd_opt_nangate45",
+    "gcd_dpl_nangate45",
+    "gcd_gpl_nangate45",
+    "gcd_incr_nangate45",
+    "grt_wire_nangate45",
+    "dbsta_nangate45",
+    "max_disp_nangate45",
+    "gcd_psm_nangate45"
+  ],
+  "designs_succeeded": [
+    "rocket_nangate45",
+    "ibex_opt_nangate45",
+    "aes_dpl_nangate45",
+    "gcd_odb_nangate45",
+    "gcd_opt_nangate45",
+    "gcd_dpl_nangate45",
+    "gcd_incr_nangate45",
+    "grt_wire_nangate45",
+    "dbsta_nangate45",
+    "gcd_psm_nangate45"
+  ],
+  "designs_failed": {
+    "gcd_gpl_nangate45": "GR failed or timed out",
+    "max_disp_nangate45": "GR failed or timed out"
+  },
+  "analysis_errors": {},
+  "results": [
+    {
+      "design": "rocket_nangate45",
+      "pdk": "nangate45",
+      "N": 39253,
+      "gs": 6,
+      "r_over_diag": 2.0,
+      "grt_total_overflow": 353518,
+      "accurate_gt_overflow": 349148.0,
+      "overflow_ratio": 0.987638536085857,
+      "n_gcells_with_overflow": 45655,
+      "thresholds": {
+        "2": {
+          "n_min": 2,
+          "n_active": 35,
+          "n_overflow": 13,
+          "n_clean": 22,
+          "TN": 17,
+          "FP": 5,
+          "FN": 0,
+          "TP": 13,
+          "P_safe_given_eta0": 1.0,
+          "specificity": 0.7727272727272727,
+          "status": "computed"
+        },
+        "10": {
+          "n_min": 10,
+          "n_active": 20,
+          "n_overflow": 13,
+          "n_clean": 7,
+          "TN": 2,
+          "FP": 5,
+          "FN": 0,
+          "TP": 13,
+          "P_safe_given_eta0": 1.0,
+          "specificity": 0.2857142857142857,
+          "status": "computed"
+        },
+        "50": {
+          "n_min": 50,
+          "n_active": 18,
+          "n_overflow": 13,
+          "n_clean": 5,
+          "TN": 0,
+          "FP": 5,
+          "FN": 0,
+          "TP": 13,
+          "P_safe_given_eta0": null,
+          "specificity": 0.0,
+          "status": "computed"
+        },
+        "100": {
+          "n_min": 100,
+          "n_active": 18,
+          "n_overflow": 13,
+          "n_clean": 5,
+          "TN": 0,
+          "FP": 5,
+          "FN": 0,
+          "TP": 13,
+          "P_safe_given_eta0": null,
+          "specificity": 0.0,
+          "status": "computed"
+        }
+      }
+    },
+    {
+      "design": "ibex_opt_nangate45",
+      "pdk": "nangate45",
+      "N": 29301,
+      "gs": 6,
+      "r_over_diag": 2.0,
+      "grt_total_overflow": 237169,
+      "accurate_gt_overflow": 235247.0,
+      "overflow_ratio": 0.9918960741074929,
+      "n_gcells_with_overflow": 17692,
+      "thresholds": {
+        "2": {
+          "n_min": 2,
+          "n_active": 9,
+          "n_overflow": 6,
+          "n_clean": 3,
+          "TN": 0,
+          "FP": 3,
+          "FN": 0,
+          "TP": 6,
+          "P_safe_given_eta0": null,
+          "specificity": 0.0,
+          "status": "computed"
+        },
+        "10": {
+          "n_min": 10,
+          "n_active": 9,
+          "n_overflow": 6,
+          "n_clean": 3,
+          "TN": 0,
+          "FP": 3,
+          "FN": 0,
+          "TP": 6,
+          "P_safe_given_eta0": null,
+          "specificity": 0.0,
+          "status": "computed"
+        },
+        "50": {
+          "n_min": 50,
+          "n_active": 9,
+          "n_overflow": 6,
+          "n_clean": 3,
+          "TN": 0,
+          "FP": 3,
+          "FN": 0,
+          "TP": 6,
+          "P_safe_given_eta0": null,
+          "specificity": 0.0,
+          "status": "computed"
+        },
+        "100": {
+          "n_min": 100,
+          "n_active": 8,
+          "n_overflow": 6,
+          "n_clean": 2,
+          "TN": 0,
+          "FP": 2,
+          "FN": 0,
+          "TP": 6,
+          "P_safe_given_eta0": null,
+          "specificity": 0.0,
+          "status": "computed"
+        }
+      }
+    },
+    {
+      "design": "aes_dpl_nangate45",
+      "pdk": "nangate45",
+      "N": 18883,
+      "gs": 6,
+      "r_over_diag": 2.0,
+      "grt_total_overflow": 104690,
+      "accurate_gt_overflow": 103631.0,
+      "overflow_ratio": 0.9898844206705512,
+      "n_gcells_with_overflow": 9169,
+      "thresholds": {
+        "2": {
+          "n_min": 2,
+          "n_active": 25,
+          "n_overflow": 6,
+          "n_clean": 19,
+          "TN": 13,
+          "FP": 6,
+          "FN": 0,
+          "TP": 6,
+          "P_safe_given_eta0": 1.0,
+          "specificity": 0.6842105263157895,
+          "status": "computed"
+        },
+        "10": {
+          "n_min": 10,
+          "n_active": 12,
+          "n_overflow": 6,
+          "n_clean": 6,
+          "TN": 0,
+          "FP": 6,
+          "FN": 0,
+          "TP": 6,
+          "P_safe_given_eta0": null,
+          "specificity": 0.0,
+          "status": "computed"
+        },
+        "50": {
+          "n_min": 50,
+          "n_active": 11,
+          "n_overflow": 6,
+          "n_clean": 5,
+          "TN": 0,
+          "FP": 5,
+          "FN": 0,
+          "TP": 6,
+          "P_safe_given_eta0": null,
+          "specificity": 0.0,
+          "status": "computed"
+        },
+        "100": {
+          "n_min": 100,
+          "n_active": 10,
+          "n_overflow": 6,
+          "n_clean": 4,
+          "TN": 0,
+          "FP": 4,
+          "FN": 0,
+          "TP": 6,
+          "P_safe_given_eta0": null,
+          "specificity": 0.0,
+          "status": "computed"
+        }
+      }
+    },
+    {
+      "design": "gcd_odb_nangate45",
+      "pdk": "nangate45",
+      "N": 367,
+      "gs": 6,
+      "r_over_diag": 2.0,
+      "grt_total_overflow": 0,
+      "accurate_gt_overflow": 0.0,
+      "overflow_ratio": 1.0,
+      "n_gcells_with_overflow": 0,
+      "thresholds": {
+        "2": {
+          "n_min": 2,
+          "n_active": 18,
+          "n_overflow": 0,
+          "n_clean": 18,
+          "status": "TRIVIAL (no overflow)",
+          "eta_max": 0.4032258064516129,
+          "FN": 0,
+          "FP": 12,
+          "TN": 6,
+          "TP": 0,
+          "P_safe_given_eta0": 1.0
+        },
+        "10": {
+          "n_min": 10,
+          "n_active": 11,
+          "n_overflow": 0,
+          "n_clean": 11,
+          "status": "TRIVIAL (no overflow)",
+          "eta_max": 0.4032258064516129,
+          "FN": 0,
+          "FP": 11,
+          "TN": 0,
+          "TP": 0,
+          "P_safe_given_eta0": 1.0
+        },
+        "50": {
+          "n_min": 50,
+          "n_active": 0,
+          "n_overflow": 0,
+          "n_clean": 0,
+          "status": "no active G-cells"
+        },
+        "100": {
+          "n_min": 100,
+          "n_active": 0,
+          "n_overflow": 0,
+          "n_clean": 0,
+          "status": "no active G-cells"
+        }
+      }
+    },
+    {
+      "design": "gcd_opt_nangate45",
+      "pdk": "nangate45",
+      "N": 294,
+      "gs": 6,
+      "r_over_diag": 2.0,
+      "grt_total_overflow": 746,
+      "accurate_gt_overflow": 740.0,
+      "overflow_ratio": 0.9919571045576407,
+      "n_gcells_with_overflow": 150,
+      "thresholds": {
+        "2": {
+          "n_min": 2,
+          "n_active": 4,
+          "n_overflow": 1,
+          "n_clean": 3,
+          "TN": 0,
+          "FP": 3,
+          "FN": 0,
+          "TP": 1,
+          "P_safe_given_eta0": null,
+          "specificity": 0.0,
+          "status": "computed"
+        },
+        "10": {
+          "n_min": 10,
+          "n_active": 4,
+          "n_overflow": 1,
+          "n_clean": 3,
+          "TN": 0,
+          "FP": 3,
+          "FN": 0,
+          "TP": 1,
+          "P_safe_given_eta0": null,
+          "specificity": 0.0,
+          "status": "computed"
+        },
+        "50": {
+          "n_min": 50,
+          "n_active": 3,
+          "n_overflow": 1,
+          "n_clean": 2,
+          "TN": 0,
+          "FP": 2,
+          "FN": 0,
+          "TP": 1,
+          "P_safe_given_eta0": null,
+          "specificity": 0.0,
+          "status": "computed"
+        },
+        "100": {
+          "n_min": 100,
+          "n_active": 1,
+          "n_overflow": 1,
+          "n_clean": 0,
+          "status": "all overflow",
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 1
+        }
+      }
+    },
+    {
+      "design": "gcd_dpl_nangate45",
+      "pdk": "nangate45",
+      "N": 294,
+      "gs": 6,
+      "r_over_diag": 2.0,
+      "grt_total_overflow": 453,
+      "accurate_gt_overflow": 446.0,
+      "overflow_ratio": 0.9845474613686535,
+      "n_gcells_with_overflow": 120,
+      "thresholds": {
+        "2": {
+          "n_min": 2,
+          "n_active": 4,
+          "n_overflow": 1,
+          "n_clean": 3,
+          "TN": 0,
+          "FP": 3,
+          "FN": 0,
+          "TP": 1,
+          "P_safe_given_eta0": null,
+          "specificity": 0.0,
+          "status": "computed"
+        },
+        "10": {
+          "n_min": 10,
+          "n_active": 4,
+          "n_overflow": 1,
+          "n_clean": 3,
+          "TN": 0,
+          "FP": 3,
+          "FN": 0,
+          "TP": 1,
+          "P_safe_given_eta0": null,
+          "specificity": 0.0,
+          "status": "computed"
+        },
+        "50": {
+          "n_min": 50,
+          "n_active": 2,
+          "n_overflow": 1,
+          "n_clean": 1,
+          "TN": 0,
+          "FP": 1,
+          "FN": 0,
+          "TP": 1,
+          "P_safe_given_eta0": null,
+          "specificity": 0.0,
+          "status": "computed"
+        },
+        "100": {
+          "n_min": 100,
+          "n_active": 1,
+          "n_overflow": 1,
+          "n_clean": 0,
+          "status": "all overflow",
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 1
+        }
+      }
+    },
+    {
+      "design": "gcd_incr_nangate45",
+      "pdk": "nangate45",
+      "N": 294,
+      "gs": 6,
+      "r_over_diag": 2.0,
+      "grt_total_overflow": 606,
+      "accurate_gt_overflow": 572.0,
+      "overflow_ratio": 0.9438943894389439,
+      "n_gcells_with_overflow": 151,
+      "thresholds": {
+        "2": {
+          "n_min": 2,
+          "n_active": 33,
+          "n_overflow": 31,
+          "n_clean": 2,
+          "TN": 2,
+          "FP": 0,
+          "FN": 9,
+          "TP": 22,
+          "P_safe_given_eta0": 0.18181818181818182,
+          "specificity": 1.0,
+          "status": "computed"
+        },
+        "10": {
+          "n_min": 10,
+          "n_active": 13,
+          "n_overflow": 13,
+          "n_clean": 0,
+          "status": "all overflow",
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 13
+        },
+        "50": {
+          "n_min": 50,
+          "n_active": 0,
+          "n_overflow": 0,
+          "n_clean": 0,
+          "status": "no active G-cells"
+        },
+        "100": {
+          "n_min": 100,
+          "n_active": 0,
+          "n_overflow": 0,
+          "n_clean": 0,
+          "status": "no active G-cells"
+        }
+      }
+    },
+    {
+      "design": "grt_wire_nangate45",
+      "pdk": "nangate45",
+      "N": 508,
+      "gs": 6,
+      "r_over_diag": 2.0,
+      "grt_total_overflow": 0,
+      "accurate_gt_overflow": 0.0,
+      "overflow_ratio": 1.0,
+      "n_gcells_with_overflow": 0,
+      "thresholds": {
+        "2": {
+          "n_min": 2,
+          "n_active": 34,
+          "n_overflow": 0,
+          "n_clean": 34,
+          "status": "TRIVIAL (no overflow)",
+          "eta_max": 0.18253968253968253,
+          "FN": 0,
+          "FP": 7,
+          "TN": 27,
+          "TP": 0,
+          "P_safe_given_eta0": 1.0
+        },
+        "10": {
+          "n_min": 10,
+          "n_active": 12,
+          "n_overflow": 0,
+          "n_clean": 12,
+          "status": "TRIVIAL (no overflow)",
+          "eta_max": 0.18253968253968253,
+          "FN": 0,
+          "FP": 7,
+          "TN": 5,
+          "TP": 0,
+          "P_safe_given_eta0": 1.0
+        },
+        "50": {
+          "n_min": 50,
+          "n_active": 3,
+          "n_overflow": 0,
+          "n_clean": 3,
+          "status": "TRIVIAL (no overflow)",
+          "eta_max": 0.18253968253968253,
+          "FN": 0,
+          "FP": 3,
+          "TN": 0,
+          "TP": 0,
+          "P_safe_given_eta0": 1.0
+        },
+        "100": {
+          "n_min": 100,
+          "n_active": 0,
+          "n_overflow": 0,
+          "n_clean": 0,
+          "status": "no active G-cells"
+        }
+      }
+    },
+    {
+      "design": "dbsta_nangate45",
+      "pdk": "nangate45",
+      "N": 508,
+      "gs": 6,
+      "r_over_diag": 2.0,
+      "grt_total_overflow": 298,
+      "accurate_gt_overflow": 246.0,
+      "overflow_ratio": 0.825503355704698,
+      "n_gcells_with_overflow": 192,
+      "thresholds": {
+        "2": {
+          "n_min": 2,
+          "n_active": 34,
+          "n_overflow": 3,
+          "n_clean": 31,
+          "TN": 27,
+          "FP": 4,
+          "FN": 0,
+          "TP": 3,
+          "P_safe_given_eta0": 1.0,
+          "specificity": 0.8709677419354839,
+          "status": "computed"
+        },
+        "10": {
+          "n_min": 10,
+          "n_active": 12,
+          "n_overflow": 3,
+          "n_clean": 9,
+          "TN": 5,
+          "FP": 4,
+          "FN": 0,
+          "TP": 3,
+          "P_safe_given_eta0": 1.0,
+          "specificity": 0.5555555555555556,
+          "status": "computed"
+        },
+        "50": {
+          "n_min": 50,
+          "n_active": 3,
+          "n_overflow": 3,
+          "n_clean": 0,
+          "status": "all overflow",
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 3
+        },
+        "100": {
+          "n_min": 100,
+          "n_active": 0,
+          "n_overflow": 0,
+          "n_clean": 0,
+          "status": "no active G-cells"
+        }
+      }
+    },
+    {
+      "design": "gcd_psm_nangate45",
+      "pdk": "nangate45",
+      "N": 510,
+      "gs": 6,
+      "r_over_diag": 2.0,
+      "grt_total_overflow": 454,
+      "accurate_gt_overflow": 403.0,
+      "overflow_ratio": 0.8876651982378855,
+      "n_gcells_with_overflow": 239,
+      "thresholds": {
+        "2": {
+          "n_min": 2,
+          "n_active": 34,
+          "n_overflow": 5,
+          "n_clean": 29,
+          "TN": 25,
+          "FP": 4,
+          "FN": 0,
+          "TP": 5,
+          "P_safe_given_eta0": 1.0,
+          "specificity": 0.8620689655172413,
+          "status": "computed"
+        },
+        "10": {
+          "n_min": 10,
+          "n_active": 11,
+          "n_overflow": 5,
+          "n_clean": 6,
+          "TN": 3,
+          "FP": 3,
+          "FN": 0,
+          "TP": 5,
+          "P_safe_given_eta0": 1.0,
+          "specificity": 0.5,
+          "status": "computed"
+        },
+        "50": {
+          "n_min": 50,
+          "n_active": 5,
+          "n_overflow": 5,
+          "n_clean": 0,
+          "status": "all overflow",
+          "FN": 0,
+          "FP": 0,
+          "TN": 0,
+          "TP": 5
+        },
+        "100": {
+          "n_min": 100,
+          "n_active": 0,
+          "n_overflow": 0,
+          "n_clean": 0,
+          "status": "no active G-cells"
+        }
+      }
+    }
+  ],
+  "summary": {
+    "2": {
+      "total_active": 230,
+      "total_overflow": 66,
+      "total_FN": 9,
+      "total_FP": 47
+    },
+    "10": {
+      "total_active": 108,
+      "total_overflow": 48,
+      "total_FN": 0,
+      "total_FP": 45
+    },
+    "50": {
+      "total_active": 54,
+      "total_overflow": 35,
+      "total_FN": 0,
+      "total_FP": 19
+    },
+    "100": {
+      "total_active": 38,
+      "total_overflow": 27,
+      "total_FN": 0,
+      "total_FP": 11
+    }
+  },
+  "key_result_n_min_50": {
+    "total_FN": 0,
+    "total_FP": 19,
+    "total_active": 54,
+    "total_overflow": 35
+  }
+}
